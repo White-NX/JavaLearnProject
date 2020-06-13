@@ -26,7 +26,7 @@
 
     主线：<http://java.talktan.cn>
 
-    就我不是.cn域名QAQ
+    就我域名没B格QAQ
 
 !!! pen "下载本项目的Markdown源文件"
 
