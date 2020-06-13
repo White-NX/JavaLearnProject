@@ -22,7 +22,7 @@
 
 !!! pen "本项目的其他分支："
 
-    Ar-Sr-Na分支：<https://java.arsrna.cn>
+    Ar-Sr-Na Serverless Learn分支：<https://java.arsrna.com>
 
     主线：<http://java.talktan.cn>
 
