@@ -22,9 +22,9 @@
 
 !!! pen "本项目的其他分支："
 
-    Ar-Sr-Na Serverless Learn分支：[https://java.arsrna.com](https://java.arsrna.com)
+    Ar-Sr-Na Serverless Learn分支：<https://java.arsrna.com>
 
-    主线：[http://java.talktan.cn](http://java.talktan.cn)
+    主线：<http://java.talktan.cn>
 
     就我不是.cn域名QAQ
 
