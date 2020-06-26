@@ -18,6 +18,8 @@
 ![デイジー✿.png](https://i.loli.net/2020/06/25/rcGT56BwCdi41IS.png)
 © Pixiv@Kinty <https://www.pixiv.net/member_illust.php?mode=medium&illust_id=82411936>
 
+**版权警告：以上两张图片并不遵循CC BY-NC-SA 3.0许可协议转载。如果您是图片的原作者，并且想删除这些图片，请联系<dmca@eyling.top>，我们会在2个工作日内移除.**
+
 ## Java中的对象
 
 现在，让我们来深刻认识什么是对象 **(不是深刻认识现实生活中的对象)**
