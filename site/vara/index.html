@@ -956,12 +956,14 @@
 <p>整型、实型（常量）、字符型数据实际上是可以混合运算的。运算中，不同类型的数据先转化为同一类型，然后进行运算。（好麻烦</p>
 <p>转换是从低级到高级哒</p>
 <p><code>byte,short,char—&gt; int —&gt; long—&gt; float —&gt; double</code></p>
-<p>但是，这还是有规则的！
-- 休想对boolean类型进行类型转换！
-- 不能把对象类型转换成不相关类的对象！（不能有小三（不是）
-- 在把容量大的类型转换为容量小的类型时必须使用强制类型转换！
-- 转换过程中可能导致溢出或损失精度！
-- 浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入！</p>
+<p>但是，这还是有规则的！</p>
+<ul>
+<li>休想对boolean类型进行类型转换！</li>
+<li>不能把对象类型转换成不相关类的对象！（不能有小三（不是）</li>
+<li>在把容量大的类型转换为容量小的类型时必须使用强制类型转换！</li>
+<li>转换过程中可能导致溢出或损失精度！</li>
+<li>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入！</li>
+</ul>
 <p>反面教材：
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">128</span><span class="p">;</span>   
 <span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="n">i</span><span class="p">;</span>
