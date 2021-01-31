@@ -18,7 +18,7 @@
 ![デイジー✿.png](https://i.loli.net/2020/06/25/rcGT56BwCdi41IS.png)
 © Pixiv@Kinty <https://www.pixiv.net/member_illust.php?mode=medium&illust_id=82411936>
 
-**版权警告：以上两张图片并不遵循CC BY-NC-SA 3.0许可协议转载。如果您是图片的原作者，并且想删除这些图片，请联系<dmca@eyling.top>，我们会在2个工作日内移除.**
+**版权警告：以上两张图片并不遵循CC BY-NC-SA 3.0许可协议转载。如果您是图片的原作者，并且想删除这些图片，请联系<sheepnx@gmail.com>，我们会在2个工作日内移除.请一定要发邮件，咱一定会删，不要起诉咱QAQ**
 
 ## Java中的对象
 
