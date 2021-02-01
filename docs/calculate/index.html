@@ -1,0 +1,893 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+    
+    
+      
+        <title>Java娘的运算 - JavaLearn</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="JavaLearn" class="md-header-nav__button md-logo" aria-label="JavaLearn">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            JavaLearn
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Java娘的运算
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      开始入土
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../start/" class="md-tabs__link md-tabs__link--active">
+        开始学♂习♂
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../License/" class="md-tabs__link">
+      许可条款
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../update/" class="md-tabs__link">
+      更新日志
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../join-us/" class="md-tabs__link">
+      加入我们(友♂好♂交♂流)
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="JavaLearn" class="md-nav__button md-logo" aria-label="JavaLearn">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
+
+    </a>
+    JavaLearn
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        开始入土
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      
+      <label class="md-nav__link" for="nav-2">
+        开始学♂习♂
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="开始学♂习♂" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          开始学♂习♂
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start/" class="md-nav__link">
+        编写第一个"能运行"Java程序
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objects/" class="md-nav__link">
+        对象
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orgin-name-rule/" class="md-nav__link">
+        如如哇如如哒(规则就是规则)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variable/" class="md-nav__link">
+        变量与常量(两CP)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vara/" class="md-nav__link">
+        Java娘的基本数据类型
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java娘的运算
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Java娘的运算
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    四则运算
+  </a>
+  
+    <nav class="md-nav" aria-label="四则运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    运算符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    运算溢出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    位运算
+  </a>
+  
+    <nav class="md-nav" aria-label="位运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    与运算娘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    或运算娘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    非运算娘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    异或运算娘
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    移位运算
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../License/" class="md-nav__link">
+        许可条款
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        更新日志
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../join-us/" class="md-nav__link">
+        加入我们(友♂好♂交♂流)
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    四则运算
+  </a>
+  
+    <nav class="md-nav" aria-label="四则运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    运算符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    运算溢出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    位运算
+  </a>
+  
+    <nav class="md-nav" aria-label="位运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    与运算娘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    或运算娘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    非运算娘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    异或运算娘
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    移位运算
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="java">Java娘的整数运算<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
+<h2 id="_1">四则运算<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Java娘作为一种编程语言，自然 <strong>支持四则运算，并且可以任意增添小括号，与小学时学的初等数学一致。</strong></p>
+<p><del>毕导：我们在小学二年级就学过的...</del><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="mi">500</span> <span class="o">+</span> <span class="mi">114</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">99</span> <span class="o">-</span> <span class="mi">88</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">*</span> <span class="p">(</span><span class="mi">6</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">21</span><span class="p">));</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+整数数值的计算 <strong>是精确的，且是永远精确的。</strong> 除法也不例外，因为 <strong>两个整数相除只能得到整数部分，小数部分会被忽略而不是四舍五入。</strong> <del>整数运算娘：我是不可被忽视的存在！（狗头</del></p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">114514</span> <span class="o">/</span> <span class="mi">1919</span><span class="p">;</span> <span class="c1">//x = 59</span>
+</code></pre></div>
+求余数则使用<code>%</code>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2345</span> <span class="o">%</span> <span class="mi">67</span><span class="p">;</span> <span class="c1">//x = 17</span>
+</code></pre></div></p>
+<h3 id="_2">运算符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>运算符用在数学表达式中，它们的作用与在数学中的作用一致，下表列出了所有的算术运算符。 <del>《小  学  数  学》</del></p>
+<p>下表中假设有两个变量，a和b，它们的值分别为10和20。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>栗子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>加法</td>
+<td><code>a+b=30</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>减法</td>
+<td><code>b-a=10</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>乘法</td>
+<td><code>a*b=200</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>除法</td>
+<td><code>b/a=2</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>取余数</td>
+<td><code>b%a=0</code></td>
+</tr>
+<tr>
+<td><code>++</code></td>
+<td>自增（在原数的基础上+1）</td>
+<td><code>a++ = 11</code></td>
+</tr>
+<tr>
+<td><code>--</code></td>
+<td>自减（在原数的基础上-1）</td>
+<td><code>a-- = 9</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Java娘温馨提示</p>
+<p>非常不建议在四则运算中使用自增和自减，因为这非常容易把你们这群人类搞懵。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意 </p>
+<p><code>++</code>和<code>--</code>写在前面和后面所求出来的结果是不同的Kora<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>！！！</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">易错</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">++</span>
+</code></pre></div>
+a的值是什么？11？实际上，a的值是10。</p>
+<p>首先a++的取值结果为10， 然后a进行自增，此时i=11，最后进行赋值 ，所以最后输出 a的值为10.</p>
+</div>
+<h2 id="_3">运算溢出<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>由于整数娘存在范围限制，如果计算超出了限制，就会导致溢出。<strong>溢出不会出错，但会得出一个奇怪的结果。</strong></p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2147483640</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">z</span><span class="p">);</span> <span class="c1">// -2147483641</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>编译上述内容就会发现......正数加正数等于负数！？</p>
+<p>这就是溢出。为了解决上面的问题，可以将<code>int</code>换为<code>long</code>。 <del>真是TMD烦死了。</del><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<h2 id="_4">位运算<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><del>我们在小学二年级就学过....不，这个真没学过</del></p>
+<p>位运算是按与，或，非以及异或的运算。本质上是按位对齐，随后依次对每一位进行运算。</p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">167776589</span><span class="p">;</span> <span class="c1">// 00001010 00000000 00010001 01001101</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">167776512</span><span class="p">;</span> <span class="c1">// 00001010 00000000 00010001 00000000</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// 167776512</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="_5">与运算娘<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>与运算娘的规则是：<strong>必须两个数同时是<code>1</code>，结果才是<code>1</code>，否则为<code>0</code></strong>。</p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//n=0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//n=0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//n=1</span>
+</code></pre></div></p>
+<h3 id="_6">或运算娘<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>或运算娘的规则是：<strong>只要两个数中有一个是<code>1</code>，结果就是<code>1</code></strong>。</p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">|</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//n=0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">|</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//n=1</span>
+</code></pre></div></p>
+<h3 id="_7">非运算娘<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>非运算娘的规则是：<strong>0和1互换</strong>。</p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">0</span><span class="p">;</span> <span class="c1">//n=1</span>
+<span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//n=0</span>
+</code></pre></div></p>
+<h3 id="_8">异或运算娘<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>异或运算的规则是：<strong>如果两个数不同，结果是<code>1</code>，否则为<code>0</code></strong></p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">^</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//n=0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">^</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//n=1</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">^</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//n=0</span>
+</code></pre></div></p>
+<h2 id="_9">移位运算<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>我们之前知道，在计算姬中，整数总是以二进制形式存储。</p>
+<p>可以对整数进行移位运算。对整数7左移1位将得到整数14，左移两位将得到整数28</p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>       <span class="c1">// 00000000 00000000 00000000 00000111 = 7</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 00000000 00000000 00000000 00001110 = 14</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// 00000000 00000000 00000000 00011100 = 28</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="mi">28</span><span class="p">;</span> <span class="c1">// 01110000 00000000 00000000 00000000 = 1879048192</span>
+<span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="mi">29</span><span class="p">;</span> <span class="c1">// 11100000 00000000 00000000 00000000 = -536870912 (溢出)</span>
+</code></pre></div></p>
+<p>那对负数右移呢？</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">536870912</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 11110000 00000000 00000000 00000000 = -268435456</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// 11111000 00000000 00000000 00000000 = -134217728</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">28</span><span class="p">;</span> <span class="c1">// 11111111 11111111 11111111 11111110 = -2</span>
+<span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">29</span><span class="p">;</span> <span class="c1">// 11111111 11111111 11111111 11111111 = -1</span>
+</code></pre></div>
+<p>如果对一个负数进行右移，最高位的1不动，结果仍然是一个负数。</p>
+<p>还有一种无符号的右移运算，使用&gt;&gt;&gt;，它的特点是不管符号位，右移后高位总是补0，因此，对一个负数进行&gt;&gt;&gt;右移，它会变成正数，原因是最高位的1变成了0：</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">536870912</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 01110000 00000000 00000000 00000000 = 1879048192</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// 00111000 00000000 00000000 00000000 = 939524096</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">29</span><span class="p">;</span> <span class="c1">// 00000000 00000000 00000000 00000111 = 7</span>
+<span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">31</span><span class="p">;</span> <span class="c1">// 00000000 00000000 00000000 00000001 = 1</span>
+</code></pre></div>
+<p>对byte和short类型进行移位时，会首先转换为int再进行位移。</p>
+<p>仔细观察可发现，左移实际上就是不断地×2，右移实际上就是不断地÷2。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>毕导是一位B站UP主，"我们在小学二年级就学过的xxx"是他节目的特色，然而，这些知识往往是高中乃至大学的知识。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Kora是一种语气词。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>郑爽和张恒关于孩子的录音事件。在录音当中郑爽说了一句“tmd烦死了，打又打不掉”。&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../vara/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                Java娘的基本数据类型
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../License/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                许可条款
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019-2021 WhiteNX. All rights reserved.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.sections', 'navigation.tabs'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
