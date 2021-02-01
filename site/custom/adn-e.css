@@ -1,0 +1,68 @@
+:root {
+  --md-admonition-icon--warn: url('data:image/svg+xml;charset=utf-8,<svg t="1612138302201" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1193" width="200" height="200"><path d="M596.7872 819.2a104.8576 104.8576 0 0 1-51.6096-13.9264 63.488 63.488 0 0 0-64.3072 0 104.0384 104.0384 0 0 1-92.9792 7.3728A102.8096 102.8096 0 0 1 327.68 742.1952 63.488 63.488 0 0 0 283.0336 696.32a101.9904 101.9904 0 0 1-70.4512-60.6208 103.2192 103.2192 0 0 1 6.5536-92.16 62.2592 62.2592 0 0 0 0-63.0784A103.6288 103.6288 0 0 1 281.8048 327.68 62.2592 62.2592 0 0 0 327.68 283.0336a102.8096 102.8096 0 0 1 151.552-64.3072 63.488 63.488 0 0 0 64.3072 0h2.048A102.8096 102.8096 0 0 1 696.32 281.8048 63.488 63.488 0 0 0 740.9664 327.68a101.9904 101.9904 0 0 1 70.4512 60.6208 103.2192 103.2192 0 0 1-6.5536 92.16 62.2592 62.2592 0 0 0 0 63.0784A103.6288 103.6288 0 0 1 742.1952 696.32 62.2592 62.2592 0 0 0 696.32 740.9664a104.0384 104.0384 0 0 1-60.6208 70.4512 101.9904 101.9904 0 0 1-38.912 7.7824zM426.8032 245.76a58.1632 58.1632 0 0 0-23.3472 4.9152 62.2592 62.2592 0 0 0-36.4544 40.96A103.2192 103.2192 0 0 1 293.2736 368.64a63.0784 63.0784 0 0 0-40.96 92.5696 104.448 104.448 0 0 1 0 104.8576 62.2592 62.2592 0 0 0-3.6864 55.7056 61.44 61.44 0 0 0 40.96 36.4544A104.0384 104.0384 0 0 1 368.64 730.7264a61.8496 61.8496 0 0 0 36.4544 40.96 60.6208 60.6208 0 0 0 54.8864-3.6864 103.2192 103.2192 0 0 1 105.2672 0 62.6688 62.6688 0 0 0 90.112-36.4544A103.2192 103.2192 0 0 1 730.7264 655.36a63.0784 63.0784 0 0 0 38.912-92.5696 104.448 104.448 0 0 1 0-104.8576 62.2592 62.2592 0 0 0 3.6864-55.7056 61.44 61.44 0 0 0-40.96-36.4544A104.0384 104.0384 0 0 1 655.36 293.2736a61.8496 61.8496 0 0 0-36.4544-40.96 60.6208 60.6208 0 0 0-54.8864 3.6864h-2.048a101.1712 101.1712 0 0 1-103.2192 0 69.632 69.632 0 0 0-31.9488-10.24z" p-id="1194"></path><path d="M491.52 368.64h40.96v204.8h-40.96zM491.52 614.4h40.96v40.96h-40.96z" p-id="1195"></path></svg>')
+}
+.md-typeset .admonition.warn,
+.md-typeset details.warn {
+  border-color: rgb(255, 204, 102);
+}
+.md-typeset .warn > .admonition-title,
+.md-typeset .warn > summary {
+  background-color: rgba(255, 204, 102, 0.1);
+}
+.md-typeset .warn > .admonition-title::before,
+.md-typeset .warn > summary::before {
+  background-color: rgb(255, 204, 102);
+  -webkit-mask-image: var(--md-admonition-icon--warn);
+          mask-image: var(--md-admonition-icon--warn);
+}
+
+.heimu:active, .heimu:hover {
+    color: #fff
+}
+/*deep ♂ dark ♂ fantasy*/
+.heimu {
+    background-color: #252525;
+    color: #252525;
+    text-shadow: none;
+    transition: color 0.31s;
+}
+.shortcode_error {
+    color: #DC143C;
+}
+/* 文字注释 例：*/
+
+/*Misaka Mikoto*/
+/*御 坂  美 琴*/
+/*TODO：删除一些无关的注释*/
+.annotate, annotate {
+    /*display: inline;*/
+    display: inline-table;
+    height: 1em/*2em*//*3em*//*114514em*/;
+    text-align: center;
+    line-height: 1.12/*1.1*/;
+    vertical-align: text-bottom;
+    white-space: nowrap;
+}
+.annotate_text, annotate_text{
+    font-size: 0.61em;
+    line-height: 1.1;
+    text-align: center;
+    display: table-header-group;
+    white-space: nowrap;
+}
+/*css键帽样式*/
+.keycap, keycap{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  white-space: nowrap;
+  border: 1px solid #aaa;
+  border-style: outset;
+  border-radius: 4px;
+  padding: 0px 3px 1px 3px;
+  margin: 0px 0px 0px 0px;
+  vertical-align: baseline;
+  line-height: 1.8em;
+  background: #fbfbfb;
+}
