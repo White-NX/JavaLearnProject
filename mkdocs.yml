@@ -82,7 +82,8 @@ nav:
         - 如如哇如如哒(规则就是规则): orgin-name-rule.md
         - 变量与常量(两CP): variable.md
         - Java娘的基本数据类型: vara.md
-        - Java娘的运算: calculate.md
+        - Java娘的整数运算: calculate.md
+        - Java娘的浮点运算: Floating_point_arithmetic.md
         - 循环酱们！: loop.md
     - 许可条款: License.md
     - 更新日志: update.md
