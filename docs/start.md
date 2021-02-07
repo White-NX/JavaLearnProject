@@ -31,6 +31,9 @@ public class HelloWorld {
 
 再键入`Java Helloworld`即可运行程序
 
+!!! warning "注意"
+    Java娘对大小写很敏感！
+
 ### 代码解释
 
 ` public static void main(String []args) ` 是一切Java的开端
