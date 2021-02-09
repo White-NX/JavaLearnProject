@@ -3,6 +3,7 @@ site_name: JavaLearn
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   palette:
     scheme: slate
     primary: indigo

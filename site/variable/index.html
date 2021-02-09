@@ -731,10 +731,23 @@
                 
               
               
-                
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+var gitalk = new Gitalk({
+  clientID: '24d2aa04c69c48d0d59e',
+  clientSecret: 'c29f6b8c195008903fb3275eb365d377ece92997',
+  repo: 'JavaLearnProject',
+  owner: 'White-NX',
+  admin: ['White-NX'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: true  // Facebook-like distraction free mode
+})
 
+gitalk.render('gitalk-container')
+</script>
 
-              
             </article>
           </div>
         </div>
