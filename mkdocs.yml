@@ -69,10 +69,19 @@ markdown_extensions:
 # Copyright
 copyright: Copyright &copy; 2019-2021 WhiteNX. All rights reserved.
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/White-NX
+      name: White-NX on github
+
 # Ex-css
 extra-css:
     - custom/adn-e.css
 
+# Plugins
+plugins:
+  - git-revision-date
 
 #tree
 nav:

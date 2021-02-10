@@ -1,0 +1,16 @@
+.scpwarn{
+    width:400px;
+    margin:50px auto;
+    border:solid 1px red;
+    position:absolute;
+}
+.scpic img{
+    display:block;
+    width:100%;
+}
+.scpwarn p{
+    position:absolute;
+    top:10px;
+    right:20px;
+    color:white;
+}

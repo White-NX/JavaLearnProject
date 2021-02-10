@@ -1,5 +1,13 @@
 # 开始入土：安装开发环境以及编辑器
 
+<table><tr><td bgcolor="	#FF8C00"><center>
+<p>警告：
+<h2>本文档接入SCP基金会安保网络</h2>
+任何尝试恶意攻击本站点的行为都是<br>
+<h2>不可取的</h2>未经授权进行恶意攻击的人员<br>将被监控，追踪并处理
+</p>
+<center></td></tr></table>
+
 在学习Java之前，我们需要安装Java环境。
 
 我并不推崇使用原`JavaLearn`中的安装`Eclipse`，而是推崇安装Java原生IDE+VS Code.
@@ -10,8 +18,7 @@
 
     前往 [VS Code](https://code.visualstudio.com/ "VS Code") 下载VS Code编辑器
 
-    在`VS Code`内安装`Chinese`和`Debugger for Java`,`Java Language Support`插件后，安装Java SE
-
+/img
 !!! warning "本教程并不保证初中学历或以下能够理解，因为我们并不推崇完全易懂。"
 
 !!! tip "当然，如果你想要一个比较完美的开发环境，您可以参考[JavaLearn原项目](https://java.talktan.cn "JavaLearn原项目")的方法安装`Eclipse`"

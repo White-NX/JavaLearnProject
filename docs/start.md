@@ -1,5 +1,11 @@
 # 开始入土：编写第一个Java程序
 
+!!!
+<div class="scpwarn">
+<div class="scpic"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/SCP_Foundation_%28emblem%29.svg"></img></div>
+<p>SCP基金会</p>
+</div>
+!!!
 
 在开始之前，我们需要了解一下Java的类，对象，方法和实例变量：
 
