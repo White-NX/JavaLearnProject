@@ -1,12 +1,5 @@
 # 开始入土：编写第一个Java程序
 
-!!!
-<div class="scpwarn">
-<div class="scpic"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/SCP_Foundation_%28emblem%29.svg"></img></div>
-<p>SCP基金会</p>
-</div>
-!!!
-
 在开始之前，我们需要了解一下Java的类，对象，方法和实例变量：
 
  - 对象：对象是类的一个"实例"，有状态和行为。例如，这里有一条狗，他的状态有："颜色"，"品种"；行为有："睡觉"，"摇尾巴"，"叫"等。
@@ -42,6 +35,33 @@ public class HelloWorld {
 
 ### 代码解释
 
-` public static void main(String []args) ` 是一切Java的开端
+你在每个java源码中，应该总能找到类似的结构.....应该`(￣﹏￣)╯`
 
-` System.out.println` 用于输出字符串。
+```java
+public class HelloWorld{
+    ...
+}
+```
+这个结构叫做`类`，类名是`HelloWorld`。
+
+`class`定义一个类，`public`代表这个类是公开的，`HelloWorld`是一个类名，按照习惯，首字母大写，当然你不大写也行，哼！
+
+!!! warning "Java娘的小贴士"
+    Master！我想告诉你几件事情(/ω＼)
+    
+    `public`以及`class`是java的关键字，是必须要大写哒！类名是可以随意命名的，当然，**类名不能是java关键词！java的`public`类名字必须要和文件名相同！**
+
+聪明的你应该注意到了，我们定义了一个名为`main`的方法：
+
+```java
+    public static void main(String[] args) {
+        ...
+    }
+```
+
+方法是一个可执行的代码块，一个成熟的方法除了方法名`main`以外，还有几个被括号括起来的方法参数。
+
+以上的`main`方法有一个参数，参数的类型是`String[]`，参数名是`args`，`void`则是参数的返回类型，而花括号之间就是方法的代码。方法的代码每一行用**半角符号`;`结束。**
+
+实际上，java的缩进是不必要的，但是它好看啊！(๑>؂<๑）
+

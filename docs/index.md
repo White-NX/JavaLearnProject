@@ -1,5 +1,6 @@
 # 开始入土：安装开发环境以及编辑器
 
+<center>
 <table><tr><td bgcolor="	#FF8C00"><center>
 <p>警告：
 <h2>本文档接入SCP基金会安保网络</h2>
@@ -7,6 +8,7 @@
 <h2>不可取的</h2>未经授权进行恶意攻击的人员<br>将被监控，追踪并处理
 </p>
 <center></td></tr></table>
+</center>
 
 在学习Java之前，我们需要安装Java环境。
 
