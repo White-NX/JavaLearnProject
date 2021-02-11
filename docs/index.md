@@ -20,8 +20,10 @@
 
     前往 [VS Code](https://code.visualstudio.com/ "VS Code") 下载VS Code编辑器
 
-/img
-!!! warning "本教程并不保证初中学历或以下能够理解，因为我们并不推崇完全易懂。"
+!!! queastion "手机端咋办？"
+    你可以[点此](https://g0.eyling.top/javacomcompiler.apk)下载第三方编译器。
+
+!!! warning "本教程并不保证初中学历或以下能够理解，但是我们已经尽力了。"
 
 !!! tip "当然，如果你想要一个比较完美的开发环境，您可以参考[JavaLearn原项目](https://java.talktan.cn "JavaLearn原项目")的方法安装`Eclipse`"
 
