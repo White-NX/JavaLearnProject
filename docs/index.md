@@ -20,8 +20,8 @@
 
     前往 [VS Code](https://code.visualstudio.com/ "VS Code") 下载VS Code编辑器
 
-!!! queastion "手机端咋办？"
-    你可以[点此](https://g0.eyling.top/javacomcompiler.apk)下载第三方编译器。
+!!! question "手机端咋办"
+    你可以[点此](https://g0.eyling.top/javacompiler.apk)下载第三方编译器。
 
 !!! warning "本教程并不保证初中学历或以下能够理解，但是我们已经尽力了。"
 
