@@ -1,5 +1,7 @@
 # 开始入土：安装开发环境以及编辑器
 
+**ATTN：不要下载位于根目录下的md文件！**
+
 在学习Java之前，我们需要安装Java环境。
 
 我并不推崇使用原`JavaLearn`中的安装`Eclipse`，而是推崇安装Java原生IDE+VS Code.
