@@ -64,6 +64,66 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+<script>
+    var url = window.location.host;
+    if ( url != "java.eyling.top" && url != "127.0.0.1"){
+        <script>
+
+  var os = function() {
+
+  var ua = navigator.userAgent, //获取浏览器UA
+
+  isWindowsPhone = /(?:Windows Phone)/.test(ua),
+
+  isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+
+  isAndroid = /(?:Android)/.test(ua),
+
+  isFireFox = /(?:Firefox)/.test(ua),
+
+  isChrome = /(?:Chrome|CriOS)/.test(ua),
+
+  isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+
+  isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+
+  isPc = !isPhone && !isAndroid && !isSymbian;
+
+  return {
+
+    isTablet: isTablet,
+
+    isPhone: isPhone,
+
+    isAndroid : isAndroid,
+
+    isPc : isPc
+
+  };
+
+}();
+
+if(os.isPhone) //判断是否iPhone
+
+  window.location.href("https://java.eyling.top");
+
+else if(os.isAndroid) //判断是否Android
+
+  window.location.href("https://java.eyling.top");
+
+else if(os.isTablet) //判断是否平板
+
+  window.location.href("https://java.eyling.top");
+    
+}
+</script>
+
+          </div>
+        </aside>
+      
     </div>
     
       
