@@ -10,3 +10,4 @@
 | `2021/2/1` | :material-check-all: 修复部分Markdown语法错误，修改错字 |
 | `2021/2/2` | :material-check: 新增"循环酱们！"章节 |
 | `2021/2/3` | :material-check: 新增"Java娘的浮点运算"章节 |
+| `2021/3/6` | :material-check-all: 解决了部分文章Markdown的语法问题，修改了错误 |
