@@ -33,7 +33,7 @@
 
 !!! pen "本项目的其他分支："
 
-    Ar-Sr-Na Serverless Learn分支：<https://java.arsrna.com>
+    Ar-Sr-Na Serverless Learn分支：<https://www.arlearn.ltd>
     ![](https://g0.eyling.top/logomain.png)
 
     主线：<http://java.talktan.cn>
