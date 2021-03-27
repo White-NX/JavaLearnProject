@@ -740,10 +740,11 @@ gitalk.render('gitalk-container')
   <script src="/overrides/whpt.js"></script>
   <!-- code -->
   <script>
-  if( $.removeCookie('eyjava') === false ){
-    $.cookie('eyjava','is_site', { domain: 'java.eyling.top' });
-    window.location.replace('https://java.eyling.top');
-}
+    if (window.self === window.top){
+        
+    }else{
+        window.location.href="https://eyling.top";
+    }
   </script>
   <!-- end of code -->
   
