@@ -1,4 +1,4 @@
-var domain = window.location.host;
-if ( domain != "java.eyling.top" && domain != "127.0.0.1"){
-    window.location.href=“https://java.eyling.top”;
+if (window.self === window.top){
+    console.log("警告：非官方域名，跳出");
+    window.location.href="https://eyling.top";
 }
