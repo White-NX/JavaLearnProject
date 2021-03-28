@@ -10,6 +10,8 @@
 <center></td></tr></table>
 </center>
 
+!!! warning "本站点禁止非旗下域名的任何镜像行为，并已经采取技术措施阻止。"
+
 在学习Java之前，我们需要安装Java环境。
 
 我并不推崇使用原`JavaLearn`中的安装`Eclipse`，而是推崇安装Java原生IDE+VS Code.
