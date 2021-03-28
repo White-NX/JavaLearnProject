@@ -762,9 +762,18 @@ gitalk.render('gitalk-container')
         
     }else{
         console.error("Site Not Allow.");
-        document.body.InnerHTML="<h1>403 Forbbiden</h1>";
         top.location.href = "https://java.eyling.top";
     }
+    
+    if (window != window.top) {
+    window.top.location.replace(window.location);
+    // 这是直接代替外窗，你也可以干别的
+}
+
+if (top != self) {
+    top.location = self.location;
+}
+
   </script>
   <!-- end of code -->
   
