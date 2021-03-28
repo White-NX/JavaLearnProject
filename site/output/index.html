@@ -637,7 +637,9 @@ gitalk.render('gitalk-container')
     if (window.self === window.top){
         
     }else{
-        top.location.href = "http://java.eyling.top";
+        console.error("Site Not Allow.");
+        document.body.InnerHTML="<h1>403 Forbbiden</h1>";
+        top.location.href = "https://java.eyling.top";
     }
   </script>
   <!-- end of code -->
