@@ -24,15 +24,4 @@ gitalk.render('gitalk-container')
   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
 </script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script src="/overrides/whpt.js"></script>
-  <!-- code -->
-  <script>
-  if (window.frames.length != parent.frames.length) {
-　　console.error('[WhiteNX安全中心]在iframe中');
-　　$(document).ready(function(){
-　　    $('body').replaceWith('<body><h1>403 Forbbiden</h1></body>');
-　　})
-　　window.open("https://java.eyling.top");
-}
-</script>
 {% endblock %}
