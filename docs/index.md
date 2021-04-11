@@ -14,22 +14,18 @@
 
 我并不推崇使用原`JavaLearn`中的安装`Eclipse`，而是推崇安装Java原生IDE+VS Code.
 
-!!! pen "安装Java SE+VS Code开发环境"
+安装Java SE+VS Code开发环境
 
-    前往 [oracle Java SE](https://www.oracle.com/java/technologies/javase-downloads.html "oracle Java SE") 下载Java开发环境
+前往 [oracle Java SE](https://www.oracle.com/java/technologies/javase-downloads.html "oracle Java SE") 下载Java开发环境
 
-    前往 [VS Code](https://code.visualstudio.com/ "VS Code") 下载VS Code编辑器
+前往 [VS Code](https://code.visualstudio.com/ "VS Code") 下载VS Code编辑器
 
 !!! question "手机端咋办"
     你可以[点此](https://g0.eyling.top/javacompiler.apk)下载第三方编译器。
 
-!!! warning "本教程并不保证初中学历或以下能够理解，但是我们已经尽力了。"
-
-!!! tip "当然，如果你想要一个比较完美的开发环境，您可以参考[JavaLearn原项目](https://java.talktan.cn "JavaLearn原项目")的方法安装`Eclipse`"
+当然，如果你想要一个比较完美的开发环境，您可以参考[JavaLearn原项目](https://java.talktan.cn "JavaLearn原项目")的方法安装`Eclipse`
 
 安装完成后，开始我们的入土之路：编写第一个程序吧！
-
-!!! warning "本分支隶属于JavaLearn项目，但所使用的条款可能有所不同。"
 
 !!! pen "本项目的其他分支："
 
@@ -39,16 +35,9 @@
     主线：<http://java.talktan.cn>
 
     就我域名没什么B格QAQ
+    **注意：** 这三个分支的方向各不相同，请酌情选择。
 
-!!! warning "JavaLearn的三个分支的目标各不相同，请酌情选择"
-
-!!! pen "下载本项目的Markdown源文件"
-
-    <https://github.com/White-NX/JavaLearnProject>
-
-!!! success ""
-
-    特别鸣谢:Ar-Sr-Na（SwordVision）
+!!! success "特别鸣谢:Ar-Sr-Na（SwordVision）"
 
 !!! warn "本分支是被二次元化过的"
     您可能会遇到如下情况：
@@ -58,3 +47,7 @@
     - `master`，释义：主人。**没错，主人，这是对`您`的称呼，Java娘之后都可能用`master`来称呼您。**
     - 出现各式各样的动漫角色名称。**无需在意，Master只需要将包含在代码块中的任何东西当做范例就好。**
     - 计算姬：计算机。
+
+!!! warning "本教程并不保证初中学历或以下能够理解，但是我们已经尽力了。"
+
+!!! warning "本分支隶属于JavaLearn项目，但所使用的条款有所不同。"
