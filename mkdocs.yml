@@ -67,7 +67,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 # Copyright
-copyright: Copyright &copy; 2019-2021 WhiteNX Group wtith ASNCC. All rights reserved.<br>It is forbidden to quote this website directly.But SwordVision is an exception.
+copyright: Copyright &copy; 2019-2021 WhiteNX Group with ASNCC. All rights reserved.<br>It is forbidden to quote this website directly.But SwordVision is an exception.
 
 extra:
   social:
