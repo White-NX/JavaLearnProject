@@ -48,7 +48,7 @@
 
 !!! success ""
 
-    特别鸣谢:Ar-Sr-Na
+    特别鸣谢:Ar-Sr-Na（SwordVision）
 
 !!! warn "本分支是被二次元化过的"
     您可能会遇到如下情况：
