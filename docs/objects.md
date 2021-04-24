@@ -2,7 +2,7 @@
 
 在本节中，我们将重点研究对象的类和概念
 
-!!! warning "警告：此篇章极其容易造成弃坑，请酌情阅读 **(但是你又不得不读)**"
+!!! warning "警告：此篇章极其容易造成弃坑 **(但是你又不得不读)**"
 
 定义：
 
@@ -18,7 +18,7 @@
 ![デイジー✿.png](https://eyling.top/image/images/2021/04/14/dx2.png)
 © Pixiv@Kinty <https://www.pixiv.net/member_illust.php?mode=medium&illust_id=82411936>
 
-**版权警告：以上两张图片并不遵循CC BY-NC-SA 3.0许可协议转载。如果您是图片的原作者，并且想删除这些图片，请联系<sheepnx@gmail.com>，我们会在2个工作日内移除.请一定要发邮件，咱一定会删，不要起诉咱QAQ**
+**版权警告：以上两张图片并不遵循CC BY-NC-SA 3.0许可协议转载。如果您是图片的原作者，并且想删除这些图片，请练习<sheepnx@gmail.com>，我们会在2个工作日内移除.请一定要发邮件，咱一定会删，不要起诉咱QAQ**
 
 ## Java中的对象
 
@@ -30,8 +30,6 @@
 
 软件对象也有自己的行为，行为通过方法体现。
 
-在软件的开发中，方法操作对象的改变，对象的相互调用也是通过方法来完成
-
 ## Java中的类
 
 类可以看作是创建Java对象时所使用的模板。
@@ -40,9 +38,7 @@
 
 ```Java
 public class Dog{
-    String breed;
     int age;
-    String color;
     void barking(){
 
     }
@@ -54,12 +50,14 @@ public class Dog{
     }
 }
 ```
+唔姆唔姆，这个类，也就是`dog`，是公共的，拥有一个变量`age`，还有三个方法，分别是`breaking()`，`eating()`和`sleeping()`。
+
 
 ## 类的构造方法
 
 每个类都有构造方法。如果没有为类定义构造方法，Java编译器将会为该类提供一个默认构造方法。
 
-下方是一个构造方法事例：
+下方是一个构造方法实例：
 
 ```Java
 public class Dog{
@@ -71,6 +69,8 @@ public class Dog{
     }
 }
 ```
+
+在这个诡异的构造器当中，您只能向`Dog()`提交一个参数`name`。
 
 ## 创建对象
 
@@ -84,8 +84,8 @@ public class Dog{
         System.out.println("小狗的名字是 : " + name ); 
     }
     public static void main(String[] args){
-        Dog myDog = new Dog( "doge" );
-    }
+        Dog myDog = new Dog( "doge" );//此处即使用了构造器，向`Dog()`提交了参数`name`并执行。
+        }
 }
 ```
 
@@ -99,17 +99,12 @@ public class Dog{
 
 ```Java
 /* 实例化对象 */
-Object referenceVariable = new Constructor();
+Object 任意对象名 = new 对象名();
 /* 访问类中的变量 */
-referenceVariable.variableName;
+对象名.对象内变量名;
 /* 访问类中的方法 */
-referenceVariable.methodName();
+对象名.方法名();
 ```
-
-!!! tip "我滴妈呀！"
-
-    什么？你看不懂？！......没关系，应该没人能看懂吧...
-    以上内容并不要求完全理解
 
 #### 举个栗子
 
@@ -152,9 +147,3 @@ public class Puppy{
 小狗的年龄为 : 2
 小狗的年龄为2 : 2
 ```
-
-在下个章节中，我们将学习源文件的命名方法，随后，我们的更新步伐将跟随主线。
-
-!!! failure "此对象并不是'对象'"
-
-    此章节中阐述的对象并不是现实生活中的对象，当然，如果你想做出一个"面向对象"的语言，我们随时恭候。

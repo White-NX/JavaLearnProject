@@ -605,7 +605,7 @@
                 <h1 id="java">Java对象和类<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
 <p>在本节中，我们将重点研究对象的类和概念</p>
 <div class="admonition warning">
-<p class="admonition-title">警告：此篇章极其容易造成弃坑，请酌情阅读 <strong>(但是你又不得不读)</strong></p>
+<p class="admonition-title">警告：此篇章极其容易造成弃坑 <strong>(但是你又不得不读)</strong></p>
 </div>
 <p>定义：</p>
 <ul>
@@ -621,20 +621,17 @@
 © Pixiv@iren <a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=82432221">https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=82432221</a></p>
 <p><img alt="デイジー✿.png" src="https://eyling.top/image/images/2021/04/14/dx2.png" />
 © Pixiv@Kinty <a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=82411936">https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=82411936</a></p>
-<p><strong>版权警告：以上两张图片并不遵循CC BY-NC-SA 3.0许可协议转载。如果您是图片的原作者，并且想删除这些图片，请联系<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#104;&#101;&#101;&#112;&#110;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#104;&#101;&#101;&#112;&#110;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>，我们会在2个工作日内移除.请一定要发邮件，咱一定会删，不要起诉咱QAQ</strong></p>
+<p><strong>版权警告：以上两张图片并不遵循CC BY-NC-SA 3.0许可协议转载。如果您是图片的原作者，并且想删除这些图片，请练习<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#104;&#101;&#101;&#112;&#110;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#104;&#101;&#101;&#112;&#110;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>，我们会在2个工作日内移除.请一定要发邮件，咱一定会删，不要起诉咱QAQ</strong></p>
 <h2 id="java_1">Java中的对象<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h2>
 <p>现在，让我们来深刻认识什么是对象 <strong>(不是深刻认识现实生活中的对象)</strong></p>
 <p>又双叒叕拿狗来举例，它拥有以下状态：颜色，名字，品种，岁数；行为有：叫，吃，睡觉等。</p>
 <p>对比现实中的对象<code>狗</code>，它与软件中的对象非常相似。</p>
 <p>软件对象也有自己的行为，行为通过方法体现。</p>
-<p>在软件的开发中，方法操作对象的改变，对象的相互调用也是通过方法来完成</p>
 <h2 id="java_2">Java中的类<a class="headerlink" href="#java_2" title="Permanent link">&para;</a></h2>
 <p>类可以看作是创建Java对象时所使用的模板。</p>
 <p>下面通过一个简单的例子来理解Java中类的定义</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span><span class="p">{</span>
-    <span class="n">String</span> <span class="n">breed</span><span class="p">;</span>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span><span class="p">{</span>
     <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
-    <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
     <span class="kt">void</span> <span class="nf">barking</span><span class="p">(){</span>
 
     <span class="p">}</span>
@@ -646,9 +643,10 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+唔姆唔姆，这个类，也就是<code>dog</code>，是公共的，拥有一个变量<code>age</code>，还有三个方法，分别是<code>breaking()</code>，<code>eating()</code>和<code>sleeping()</code>。</p>
 <h2 id="_1">类的构造方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>每个类都有构造方法。如果没有为类定义构造方法，Java编译器将会为该类提供一个默认构造方法。</p>
-<p>下方是一个构造方法事例：</p>
+<p>下方是一个构造方法实例：</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span><span class="p">{</span>
     <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(){</span>
     <span class="p">}</span>
@@ -658,6 +656,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>在这个诡异的构造器当中，您只能向<code>Dog()</code>提交一个参数<code>name</code>。</p>
 <h2 id="_2">创建对象<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>对象是根据类创建的。</p>
 <p>下方是一个创建对象的例子：</p>
@@ -666,8 +665,8 @@
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;小狗的名字是 : &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="p">);</span> 
     <span class="p">}</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-        <span class="n">Dog</span> <span class="n">myDog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="p">(</span> <span class="s">&quot;doge&quot;</span> <span class="p">);</span>
-    <span class="p">}</span>
+        <span class="n">Dog</span> <span class="n">myDog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="p">(</span> <span class="s">&quot;doge&quot;</span> <span class="p">);</span><span class="c1">//此处即使用了构造器，向`Dog()`提交了参数`name`并执行。</span>
+        <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>上方的代码会打印出以下内容：</p>
@@ -675,17 +674,12 @@
 </code></pre></div>
 <h3 id="_3">访问实例变量和方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/* 实例化对象 */</span>
-<span class="n">Object</span> <span class="n">referenceVariable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Constructor</span><span class="p">();</span>
+<span class="n">Object</span> <span class="n">任意对象名</span> <span class="o">=</span> <span class="k">new</span> <span class="n">对象名</span><span class="p">();</span>
 <span class="cm">/* 访问类中的变量 */</span>
-<span class="n">referenceVariable</span><span class="p">.</span><span class="na">variableName</span><span class="p">;</span>
+<span class="n">对象名</span><span class="p">.</span><span class="na">对象内变量名</span><span class="p">;</span>
 <span class="cm">/* 访问类中的方法 */</span>
-<span class="n">referenceVariable</span><span class="p">.</span><span class="na">methodName</span><span class="p">();</span>
+<span class="n">对象名</span><span class="p">.</span><span class="na">方法名</span><span class="p">();</span>
 </code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">我滴妈呀！</p>
-<p>什么？你看不懂？！......没关系，应该没人能看懂吧...
-以上内容并不要求完全理解</p>
-</div>
 <h4 id="_4">举个栗子<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>以下程序解释了如何访问实例变量和调用成员方法</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Puppy</span><span class="p">{</span>
@@ -721,11 +715,6 @@
 小狗的年龄为 : 2
 小狗的年龄为2 : 2
 </code></pre></div>
-<p>在下个章节中，我们将学习源文件的命名方法，随后，我们的更新步伐将跟随主线。</p>
-<div class="admonition failure">
-<p class="admonition-title">此对象并不是'对象'</p>
-<p>此章节中阐述的对象并不是现实生活中的对象，当然，如果你想做出一个"面向对象"的语言，我们随时恭候。</p>
-</div>
                 
                   
                     
@@ -734,7 +723,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: 2021-02-07
+      最后更新: 2021-04-14
     
   </small>
 </div>
