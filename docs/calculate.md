@@ -61,6 +61,29 @@ int x = 2345 % 67; //x = 17
 	
 	 首先a++的取值结果为10， 然后a进行自增，此时a=11，最后进行赋值 ，所以最后输出 a的值为10.
 
+!!! note "关于a++与++a的区别"
+    这个的区别实际上非常好认定，我们先来看一段超~简单的代码：
+    ```java
+    public class Main {
+    public static void main(String[] args) {
+            int a = 1;
+            int x = 1;
+            a = a++;
+            x = ++x;
+            System.out.println(a);
+            System.out.println(x);
+        }
+    }
+    ```
+    编译可得：
+    ```
+    1
+    2
+    ```
+    唔姆，不难发现，它们区别是使用的先后顺序。
+    
+    **a++是使用a后，再进行+1，++a是先进行+1，再使用a**
+    
 [^2]: Kora是一种语气词。
 
 ## 运算溢出
