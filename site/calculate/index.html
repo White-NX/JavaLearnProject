@@ -740,6 +740,14 @@
 </code></pre></div>
 a的值是什么？11？实际上，a的值是10。</p>
 <p>首先a++的取值结果为10， 然后a进行自增，此时a=11，最后进行赋值 ，所以最后输出 a的值为10.</p>
+<p>实际上，以上的代码作用相当于：
+ <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</code></pre></div>
+ 故，输出的a值为10.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">关于a++与++a的区别</p>
@@ -863,7 +871,7 @@ a的值是什么？11？实际上，a的值是10。</p>
 <div class="md-source-date">
   <small>
     
-      最后更新: 2021-03-06
+      最后更新: 2021-05-13
     
   </small>
 </div>
