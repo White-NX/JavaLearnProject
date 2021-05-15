@@ -86,6 +86,7 @@ plugins:
 #tree
 nav:
     - 开始入土: index.md
+    - 什么是Java娘: what-is-java.md
     - 开始学♂习♂:
         - 编写第一个"能运行"Java程序: start.md
         - 对象: objects.md

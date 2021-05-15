@@ -14,7 +14,7 @@
     
     
       
-        <title>Java娘的输入 - WhiteNX Java教程</title>
+        <title>什么是Java娘 - WhiteNX Java教程</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Java娘的输入
+              什么是Java娘
             
           </span>
         </div>
@@ -135,10 +135,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../what-is-java/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       什么是Java娘
     </a>
   </li>
@@ -147,15 +149,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../start/" class="md-tabs__link md-tabs__link--active">
+      <a href="../start/" class="md-tabs__link">
         开始学♂习♂
       </a>
     </li>
@@ -255,11 +255,44 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../what-is-java/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          什么是Java娘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         什么是Java娘
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -270,14 +303,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
         开始学♂习♂
@@ -401,44 +432,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Java娘的输入
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../input-io-basic/" class="md-nav__link">
         Java娘的输入
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -532,32 +530,36 @@
               
                 
                 
-                <h1 id="java">Java娘的输入<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
-<p>请做好心理准备，输入可比输出难多了......</p>
-<p>我们可以看一个从命令行读取整数和字符串的栗子：
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span> 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;输入你的名字&quot;</span><span class="p">);</span> 
-        <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>  
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;输入你的年龄 &quot;</span><span class="p">);</span> 
-        <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span> 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;你好, %s, 你的岁数为： %d\n&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span> 
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p>聪明的你应该发现了，我们使用<code>import</code>导入了一个名为<code>java.util.Scanner</code>的包。</p>
-<div class="admonition info">
-<p class="admonition-title">啥是import</p>
-<p>唔姆，在这里浅谈一下：<code>import</code>是一个用于导入类的语句，并且必须放在代码的开端。</p>
+                <h1 id="java">什么是Java娘？<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
+<p>Java娘是由Sun公司在1995年5月做出的一门面向对象的语言，于2010年卖身给 <abbr title="甲骨文公司">Oracle</abbr>.</p>
+<p>在卖身前，Sun公司曾试图公开Java娘的裸体<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>由于其自身良好的身体素质<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>（各种意义上），Java娘能够运行在很多的平台上，著名的有：</p>
+<ul>
+<li>Linux</li>
+<li>Windows</li>
+<li>MacOS</li>
+<li>Android</li>
+</ul>
+<p>多年来，Java娘不断的被程序猿拔下类库，完事后再被穿上由程序员亲手制作的类库，不断重复着这个过程....</p>
+<details class="tip"><summary>Java娘的简介</summary><div class="admonition info">
+<p class="admonition-title">以下搬运自程序语言娘化计划<a href="https://next.rikunabi.com/tech/docs/ct_s03600.jsp?p=002412">https://next.rikunabi.com/tech/docs/ct_s03600.jsp?p=002412</a></p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">用Scanner干好事</p>
-<p>使用Scanner可以轻松地使用<code>scanner.nextLine()</code>探测用户所输入的字符串；使用<code>scanner.nextInt()</code>则可以探测用户所输入的整数。
-使用<code>Scanner</code>会自动转换输入的数据类型。
-<del>这样的亮点是可以大大简化使用<code>System.in</code>所带来的麻烦，实现更加快捷的信息分发体系，实现与代码的深度共建，形成组合拳。更方便个人开发者赋能客户，增加横向不同场景价值并延长服务链路。并且可以方便地结束人类的年龄体系优势和自然势能，在多个年龄层面实现高度渗透。</del></p>
+<p>她仿佛是宫泽贤治的《不畏风雨》中出现的、性格木讷的女孩子。从小就因为迟钝和大食量等特征被别人当作笨蛋，从小学入学开始进入田径部、坚持跑步，在中长跑中经常取得好成绩，给人活泼的印象。是个十分努力的女孩子。</p>
+<p>她的家境并不算好。父亲Sun是个有才能的艺术家，但不擅长理财，在她14岁的时候因为苦于借债积劳成疾而去世。她被Oracle叔叔收养，那时还与Google叔叔之间因为对她的监护权问题而引起争端并闹上法庭。</p>
+<p>在周围的人都担心，正值青春期的她在这样的处境下会不会一蹶不振的时候，她却处变不惊，继续着每天练习跑步的生活。</p>
+<p>朴素的、认真的、难说是聪明的她，进入高中后不知是不是稍稍开始对异性在意，被人看到她偷偷学别的女孩子的时尚穿着在街上走。虽然会受到“虽然很努力，也许稍微有点过时”、“那衣服与Java的印象不合”之类的否定评价，但感到“意外地很萌？”的好意的人也很多。</p>
+<p>喜欢喝咖啡，只喝印度尼西亚产的。其本人曾说过“喜欢咖啡胜过三顿饭”，不禁让人稍稍担心“这样对健康没问题吗？”</p>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>指兼容性，仅此而已。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>指源代码&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
                 
                   
@@ -567,7 +569,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: 2021-04-03
+      最后更新: 2021-05-15
     
   </small>
 </div>
@@ -612,7 +614,7 @@ gitalk.render('gitalk-container')
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../output/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -621,19 +623,19 @@ gitalk.render('gitalk-container')
               <span class="md-footer__direction">
                 上一页
               </span>
-              Java娘的输出
+              开始入土
             </div>
           </div>
         </a>
       
       
-        <a href="../License/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../start/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              许可条款
+              编写第一个"能运行"Java程序
             </div>
           </div>
           <div class="md-footer__button md-icon">
