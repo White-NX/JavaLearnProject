@@ -8,8 +8,8 @@
 
     主线分支作者：踪天朔 <ts@ar-cdn.top>
 
-    Ar-Sr-Na分支作者：<root@arsrna.cn>
+    Ar-Sr-Na分支作者：<root@arsrna.com>
 
     我们的QQ群号：`1097347557`
 
-**我们非常感谢你的加入**
+!!! success "我们非常感谢您的加入"
