@@ -96,6 +96,7 @@ nav:
         - Java娘的整数运算: calculate.md
         - Java娘的浮点运算: Floating_point_arithmetic.md
         - Java娘的判断: if-else.md
+        - Java娘的切换: switch.md
         - 循环酱们！: loop.md
         - Java娘的输出: output.md
         - Java娘的输入: input-io-basic.md

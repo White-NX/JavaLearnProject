@@ -14,7 +14,7 @@
     
     
       
-        <title>WhiteNX JavaLearn Project 帮助中心 - WhiteNX Java教程</title>
+        <title>Java娘的切换 - WhiteNX Java教程</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#whitenx-javalearn-project" class="md-skip">
+        <a href="#switch" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WhiteNX JavaLearn Project 帮助中心
+              Java娘的切换
             
           </span>
         </div>
@@ -147,13 +147,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../start/" class="md-tabs__link">
+      <a href="../start/" class="md-tabs__link md-tabs__link--active">
         开始学♂习♂
       </a>
     </li>
@@ -256,12 +258,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         开始学♂习♂
@@ -373,11 +377,51 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../switch/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java娘的切换
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Java娘的切换
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    举个栗子
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -479,6 +523,13 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    举个栗子
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -492,23 +543,75 @@
               
                 
                 
-                <h1 id="whitenx-javalearn-project">WhiteNX JavaLearn Project 帮助中心<a class="headerlink" href="#whitenx-javalearn-project" title="Permanent link">&para;</a></h1>
-<p>欢迎来到本帮助中心，此页面用于帮助用户解决一些常规问题。</p>
-<div class="admonition tip">
-<p class="admonition-title">我能来这里做什么？</p>
-<p>这里是在文档内的任何问题以及解决方案的集合点，您如果在查看教程时发现了错误，可以前往此页面寻找。</p>
-</div>
+                <h1 id="switch">Switch多重选择<a class="headerlink" href="#switch" title="Permanent link">&para;</a></h1>
+<p>欸，你想，如果我想要有很多的选择，用<code>if</code>语句是不是太麻烦了？没错，所以我们今天就来学习<code>switch语句</code>。</p>
+<p>一个基本的<code>Switch</code>语句长这样
+<div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="p">(</span><span class="n">表达式</span><span class="p">){</span>
+    <span class="k">case</span> <span class="n">值</span> <span class="p">:</span>
+       <span class="n">代码块</span>
+       <span class="k">break</span><span class="p">;</span> <span class="c1">//中断（可选）</span>
+    <span class="k">case</span> <span class="n">值</span> <span class="p">:</span>
+       <span class="n">代码块</span>
+       <span class="k">break</span><span class="p">;</span> <span class="c1">//中断（可选）</span>
+    <span class="c1">//case语句的数量理论上是无限的</span>
+    <span class="k">default</span> <span class="p">:</span> <span class="c1">//默认（可选）</span>
+       <span class="n">代码块</span>
+<span class="p">}</span>
+</code></pre></div>
+<code>Switch</code>语句通过<code class="highlight"><span class="k">switch</span><span class="p">(</span><span class="n">表达式</span><span class="p">)</span></code>的结果，跳转到与表达式之匹配的<code>case</code>上执行，再 <strong>通过判断有无break来决定是否结束执行。</strong></p>
+<h3 id="_1">举个栗子<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>我们来看一个简单的栗子</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tea</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">        <span class="kt">int</span> <span class="n">clock</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span>        <span class="k">switch</span> <span class="p">(</span><span class="n">clock</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1点钟，是时候睡觉了(¦3[▓▓]&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;三点钟了，饮茶先啦&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;四点钟了，是时候吃两面包夹芝士&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+
+<span class="nl">        default:</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;这什么乱七八糟的&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>修改高亮语句的数字为<code>2</code>，<code>3</code>，<code>4</code>，<code>114514</code>后依次观察，可以发现，如果<code>clock</code>的值不符合任何一个<code>case</code>，那么就会执行<code>default</code>内的代码块。</p>
 <div class="admonition warning">
-<p class="admonition-title">这里不是万能的</p>
-<p>您的错误很可能不是常规错误，这里也没有给出解决方案，您可以前往<code>baidu.com</code>或<code>bing.com</code>查询解决方案。</p>
+<p class="admonition-title">switch语句具有穿透性</p>
+<p>使用<code>switch()</code>语句时，一定注意不要漏写break，否则<code>switch()</code>语句将会在找到表达式对应的<code>case</code>后直接无视表达式的值，向下执行所有<code>case</code>内的代码块。</p>
 </div>
-<div class="admonition failure">
-<p class="admonition-title">本页面尚未完善，无法履行它的职责</p>
+<div class="admonition tip">
+<p class="admonition-title">case语句可以使用字符串进行匹配。</p>
 </div>
-<div class="admonition question">
-<p class="admonition-title">如何提问题？</p>
-<p>您可以前往<a href="https://github.com/White-NX/Javalearn-issuesreport/issues/new" title="此网页">Github</a>提交issues.</p>
+<div class="admonition note">
+<p class="admonition-title">在Java12中的case</p>
+<p>在Java12中，由于不写<code>break;</code>将会带来严重的逻辑错误且不易被发现，故<code>case</code>多了一种形式：表达式形式。</p>
+<p>长这样：
+```java
+public class Main {
+public static void main(String[] args) {
+    String fruit = "apple";
+    switch (fruit) {
+    case "apple" -&gt; System.out.println("选择 apple");
+    case "pear" -&gt; System.out.println("选择 pear");
+    case "mango" -&gt; {
+        System.out.println("选择 mango");
+    }
+    default -&gt; System.out.println("欸，还没选呢，就是玩");
+    }
+}</p>
 </div>
+<p>}</p>
+<div class="highlight"><pre><span></span><code>```
+</code></pre></div>
                 
                   
                     
@@ -517,7 +620,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: 2020-06-20
+      最后更新: 2021-05-17
     
   </small>
 </div>
@@ -560,6 +663,39 @@ gitalk.render('gitalk-container')
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../if-else/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Java娘的判断
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../loop/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              循环酱们！
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
