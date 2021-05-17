@@ -16,7 +16,7 @@ switch(表达式){
        代码块
 }
 ```
-`Switch`语句通过`#!java switch(表达式)`的结果，跳转到与表达式之匹配的`case`上执行，再 **通过判断有无break来决定是否结束执行。**
+`Switch`语句通过`switch(表达式)`的结果，跳转到与表达式之匹配的`case`上执行，再 **通过判断有无break来决定是否结束执行。**
 
 ###举个栗子
 
@@ -58,6 +58,7 @@ public class Tea {
     在Java12中，由于不写`break;`将会带来严重的逻辑错误且不易被发现，故`case`多了一种形式：表达式形式。
     
     长这样：
+    
     ```java
     public class Main {
     public static void main(String[] args) {
@@ -69,8 +70,9 @@ public class Tea {
             System.out.println("选择 mango");
         }
         default -> System.out.println("欸，还没选呢，就是玩");
+            }
         }
     }
-}
-
+    
+    !!! tip "这个栗子同时也展示了switch语句能够对字符串进行判断。"
     ```

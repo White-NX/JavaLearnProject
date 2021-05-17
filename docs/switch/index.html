@@ -558,7 +558,7 @@
        <span class="n">代码块</span>
 <span class="p">}</span>
 </code></pre></div>
-<code>Switch</code>语句通过<code class="highlight"><span class="k">switch</span><span class="p">(</span><span class="n">表达式</span><span class="p">)</span></code>的结果，跳转到与表达式之匹配的<code>case</code>上执行，再 <strong>通过判断有无break来决定是否结束执行。</strong></p>
+<code>Switch</code>语句通过<code>switch(表达式)</code>的结果，跳转到与表达式之匹配的<code>case</code>上执行，再 <strong>通过判断有无break来决定是否结束执行。</strong></p>
 <h3 id="_1">举个栗子<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>我们来看一个简单的栗子</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tea</span> <span class="p">{</span>
@@ -594,24 +594,24 @@
 <div class="admonition note">
 <p class="admonition-title">在Java12中的case</p>
 <p>在Java12中，由于不写<code>break;</code>将会带来严重的逻辑错误且不易被发现，故<code>case</code>多了一种形式：表达式形式。</p>
-<p>长这样：
-```java
-public class Main {
-public static void main(String[] args) {
-    String fruit = "apple";
-    switch (fruit) {
-    case "apple" -&gt; System.out.println("选择 apple");
-    case "pear" -&gt; System.out.println("选择 pear");
-    case "mango" -&gt; {
-        System.out.println("选择 mango");
-    }
-    default -&gt; System.out.println("欸，还没选呢，就是玩");
-    }
-}</p>
-</div>
-<p>}</p>
-<div class="highlight"><pre><span></span><code>```
+<p>长这样：</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">fruit</span> <span class="o">=</span> <span class="s">&quot;apple&quot;</span><span class="p">;</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">fruit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="s">&quot;apple&quot;</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;选择 apple&quot;</span><span class="p">);</span>
+    <span class="k">case</span> <span class="s">&quot;pear&quot;</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;选择 pear&quot;</span><span class="p">);</span>
+    <span class="k">case</span> <span class="s">&quot;mango&quot;</span> <span class="o">-&gt;</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;选择 mango&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">default</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;欸，还没选呢，就是玩&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">!!!</span> <span class="n">tip</span> <span class="s">&quot;这个栗子同时也展示了switch语句能够对字符串进行判断。&quot;</span>
 </code></pre></div>
+</div>
                 
                   
                     
