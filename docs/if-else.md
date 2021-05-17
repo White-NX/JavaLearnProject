@@ -104,11 +104,11 @@ if(布尔表达式 1){
    public static void main(String args[]){
       int clock = 3;
  
-      if( x == 3){
+      if( clock == 3){
          System.out.print("三点钟啦，饮茶先啦");
-      }else if( x == 4 ){
+      }else if( clock == 4 ){
          System.out.print("四点钟啦，饮你妹啊");
-      }else if( x == 30 ){
+      }else if( clock == 30 ){
          System.out.print("你不讲武德，一天有30小时");
       }else{
          System.out.print("这是 else 语句");
