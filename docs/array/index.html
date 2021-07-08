@@ -14,7 +14,7 @@
     
     
       
-        <title>特殊设置 - WhiteNX Java教程</title>
+        <title>Java娘的数组 - WhiteNX Java教程</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              特殊设置
+              Java娘的数组
             
           </span>
         </div>
@@ -163,13 +163,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../start/" class="md-tabs__link">
+      <a href="../start/" class="md-tabs__link md-tabs__link--active">
         开始学♂习♂
       </a>
     </li>
@@ -203,12 +205,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../special/" class="md-tabs__link">
       特殊设置
     </a>
   </li>
@@ -286,12 +286,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         开始学♂习♂
@@ -415,11 +417,58 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../array/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java娘的数组
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Java娘的数组
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    举个栗子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    详解数组
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -502,44 +551,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          特殊设置
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../special/" class="md-nav__link">
         特殊设置
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -569,6 +585,20 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    举个栗子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    详解数组
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -582,9 +612,96 @@
               
                 
                 
-                <h1 id="_1">特殊设置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><strong>关闭黑白色默哀选项</strong></p>
-<p><a class="md-button st-BAW" href="#">关闭黑白色页面</a></p>
+                <h1 id="_1">数组<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>数组，顾名思义，就是一堆数字的组合<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>，也就是解决人类麻烦的产物，使用数组<code>numbers[100]</code>可以代替大量的类似于<code>numbers1，numbers2...</code>的变量。</p>
+<h2 id="_2">举个栗子<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>假设我们一组相同类型的变量，例如5位同学的名字，我们可以这么写：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 5位同学的名字</span>
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">希耶丝塔</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">迷迭香</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n3</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">波特</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n4</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Nymph</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n5</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">御坂</span><span class="err">&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>
+<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<div class="admonition note">
+<p class="admonition-title">数组可以存储字符串</p>
+</div>
+<p>欧，我亲爱的老伙计，这也太麻烦了吧，能不能简单点？</p>
+<p>当然能。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 5位同学的名字</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">ns</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">ns</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">希耶丝塔</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="n">ns</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">迷迭香</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="n">ns</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">波特</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="n">ns</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Nymph</span><span class="err">&#39;</span><span class="p">;</span>
+        <span class="n">ns</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">御坂</span><span class="err">&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="_3">详解数组<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>定义一个数组的 <a href="/vara/#_1">类型</a> ，可以使用<code>类型[]</code>，就比如我们需要一个<code>int</code>类型的数组，就使用<code>int[]</code>。</p>
+<div class="admonition note">
+<p class="admonition-title">数组的特点</p>
+<p>数组的初始化默认值：整形都为<code>0</code>，浮点都为<code>0.0</code>，布朗都为<code>false</code>。</p>
+<p>数组创建后，大小不可改变，当然，你也可以不指定数组大小直接定义，例如：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span> <span class="n">ns</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="p">{</span><span class="err">&#39;</span><span class="n">希耶丝塔</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">迷迭香</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">波特</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">Nymph</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">御坂</span><span class="err">&#39;</span><span class="p">};</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ns</span><span class="p">.</span><span class="na">lengh</span><span class="p">);</span> <span class="c1">//自动推断长度</span>
+</code></pre></div>
+如果你还嫌麻烦，也可以简写为：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span> <span class="n">ns</span> <span class="o">=</span> <span class="p">{</span><span class="err">&#39;</span><span class="n">希耶丝塔</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">迷迭香</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">波特</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">Nymph</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">御坂</span><span class="err">&#39;</span><span class="p">};</span>
+</code></pre></div></p>
+</div>
+<p>若要访问数组中的一串数据，则要使用索引，索引由<code>0</code>开始。例如，一个长度为<code>6</code>的数组，索引范围就是<code>0</code>到<code>5</code>。</p>
+<p>数组可以使用赋值语句进行赋值，即可以使用<code>ns[1] = 114514;</code>等类似的赋值语句。</p>
+<p>可以使用<code>数组名称.length</code>来获取数组的长度，举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 5位同学的名字</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">ns</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ns</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+输出结果为：
+<div class="highlight"><pre><span></span><code>5
+</code></pre></div>
+当然，如果索引超出范围，会报错。</p>
+<div class="admonition danger">
+<p class="admonition-title">不可以直接将<code>数组名称.length</code>直接作为数组索引，在使用前必须<code>-1</code></p>
+</div>
+<p>举个反向栗子：</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 5位同学的名字</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">ns</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">ns</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<span class="hll">        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ns</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">);</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+在执行高亮语句时，会报错，也就是超出了索引。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>该定义具有片面性。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>【希耶丝塔】出自番剧《侦探已死》; 【迷迭香】出自游戏《明日方舟》; 【波特】出自小说《哈利波特》; 【Nymph】出自番剧《天降之物》; 【御坂】出自番剧《某科学的超电磁炮》。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>上述人物，波特除外，都是我的老婆，不接受反驳和PR。&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
                   
                     
@@ -593,7 +710,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: 2021-05-23
+      最后更新: 2021-07-08
     
   </small>
 </div>
@@ -631,7 +748,7 @@ gitalk.render('gitalk-container')
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../join-us/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../switch/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -640,11 +757,25 @@ gitalk.render('gitalk-container')
               <span class="md-footer__direction">
                 上一页
               </span>
-              加入我们(友♂好♂交♂流)
+              Java娘的切换
             </div>
           </div>
         </a>
       
+      
+        <a href="../loop/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              循环酱们！
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
