@@ -1,11 +1,15 @@
 site_name: WhiteNX Java教程
+repo_url: https://github.com/White-NX/JavaLearnProject
+repo_name: WhiteNX/JavaLearnProject
 
 # Configuration
 theme:
+  name: material
   features:
     - navigation.top
     - navigation.sections
-  name: material
+    - navigation.instant
+    - navigation.tabs
   custom_dir: overrides
   palette:
     scheme: slate
@@ -93,19 +97,21 @@ nav:
     - 开始入土: index.md
     - 什么是Java娘: what-is-java.md
     - 开始学♂习♂:
-        - 编写第一个"能运行"的Java程序: start.md
-        - 对象: objects.md
-        - 如如哇如如哒(规则就是规则): orgin-name-rule.md
-        - 变量与常量(两CP): variable.md
-        - Java娘的基本数据类型: vara.md
-        - Java娘的整数运算: calculate.md
-        - Java娘的浮点运算: Floating_point_arithmetic.md
-        - Java娘的判断: if-else.md
-        - Java娘的切换: switch.md
-        - Java娘的数组: array.md
-        - 循环酱们！: loop.md
-        - Java娘的输出: output.md
-        - Java娘的输入: input-io-basic.md
+        - 入门:
+            - 编写第一个"能运行"的Java程序: start.md
+            - 对象: objects.md
+            - 如如哇如如哒(规则就是规则): orgin-name-rule.md
+        - 程序基础: 
+            - 变量与常量(两CP): variable.md
+            - Java娘的基本数据类型: vara.md
+            - Java娘的整数运算: calculate.md
+            - Java娘的浮点运算: Floating_point_arithmetic.md
+            - Java娘的输出: output.md
+            - Java娘的输入: input-io-basic.md
+        - 流程控制:
+            - Java娘的判断: if-else.md
+            - Java娘的切换: switch.md
+            - Java娘的数组: array.md
+            - 循环酱们！: loop.md
     - 许可条款: License.md
     - 加入我们(友♂好♂交♂流): join-us.md
-    - 特殊设置: special.md        
