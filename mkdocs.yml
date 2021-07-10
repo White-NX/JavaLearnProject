@@ -5,16 +5,14 @@ repo_name: WhiteNX/JavaLearnProject
 # Configuration
 theme:
   name: material
-  features:
-    - navigation.top
-    - navigation.sections
-    - navigation.instant
-    - navigation.tabs
   custom_dir: overrides
   palette:
     scheme: slate
     primary: indigo
     accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tabs
 
   
   # Don't include MkDocs' JavaScript
@@ -24,8 +22,9 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: zh
   features:
-    # - navigation.instant
+    - navigation.top
     - navigation.sections
+    - navigation.instant
     - navigation.tabs
   font:
     text: Roboto

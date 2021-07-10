@@ -1,0 +1,1384 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>Java娘的基本数据类型 - WhiteNX Java教程</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  <!-- jquery -->
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <!-- Nymph CORE sp. -->
+  <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+  <script src="https://g0.eyling.top/wgnxpt.js"></script>
+     <!-- Font Awesome CSS-->
+   <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="WhiteNX Java教程" class="md-header__button md-logo" aria-label="WhiteNX Java教程" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WhiteNX Java教程
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Java娘的基本数据类型
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/White-NX/JavaLearnProject/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    WhiteNX/JavaLearnProject
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="index.html" class="md-tabs__link">
+      开始入土
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="what-is-java.html" class="md-tabs__link">
+      什么是Java娘
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="start.html" class="md-tabs__link md-tabs__link--active">
+        开始学♂习♂
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="License.html" class="md-tabs__link">
+      许可条款
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="join-us.html" class="md-tabs__link">
+      加入我们(友♂好♂交♂流)
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="WhiteNX Java教程" class="md-nav__button md-logo" aria-label="WhiteNX Java教程" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    WhiteNX Java教程
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/White-NX/JavaLearnProject/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    WhiteNX/JavaLearnProject
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        开始入土
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="what-is-java.html" class="md-nav__link">
+        什么是Java娘
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        开始学♂习♂
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="开始学♂习♂" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          开始学♂习♂
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        入门
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="入门" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          入门
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="start.html" class="md-nav__link">
+        编写第一个"能运行"的Java程序
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="objects.html" class="md-nav__link">
+        对象
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="orgin-name-rule.html" class="md-nav__link">
+        如如哇如如哒(规则就是规则)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        程序基础
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="程序基础" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          程序基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variable.html" class="md-nav__link">
+        变量与常量(两CP)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java娘的基本数据类型
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="vara.html" class="md-nav__link md-nav__link--active">
+        Java娘的基本数据类型
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    内置数据类型
+  </a>
+  
+    <nav class="md-nav" aria-label="内置数据类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#byte" class="md-nav__link">
+    Byte酱！
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short" class="md-nav__link">
+    short酱！
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int" class="md-nav__link">
+    每次都被当做比较对象的int酱！
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long" class="md-nav__link">
+    超大的long酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    float酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double" class="md-nav__link">
+    double酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean" class="md-nav__link">
+    专一的boolean酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    不同的char酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void" class="md-nav__link">
+    被藏起来的void酱
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    引用类型酱
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自动类型转换
+  </a>
+  
+    <nav class="md-nav" aria-label="自动类型转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    强制类型转换
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calculate.html" class="md-nav__link">
+        Java娘的整数运算
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Floating_point_arithmetic.html" class="md-nav__link">
+        Java娘的浮点运算
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="output.html" class="md-nav__link">
+        Java娘的输出
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="input-io-basic.html" class="md-nav__link">
+        Java娘的输入
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        流程控制
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="流程控制" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          流程控制
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="if-else.html" class="md-nav__link">
+        Java娘的判断
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="switch.html" class="md-nav__link">
+        Java娘的切换
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="array.html" class="md-nav__link">
+        Java娘的数组
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="loop.html" class="md-nav__link">
+        循环酱们！
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="License.html" class="md-nav__link">
+        许可条款
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="join-us.html" class="md-nav__link">
+        加入我们(友♂好♂交♂流)
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    内置数据类型
+  </a>
+  
+    <nav class="md-nav" aria-label="内置数据类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#byte" class="md-nav__link">
+    Byte酱！
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short" class="md-nav__link">
+    short酱！
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int" class="md-nav__link">
+    每次都被当做比较对象的int酱！
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long" class="md-nav__link">
+    超大的long酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    float酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double" class="md-nav__link">
+    double酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean" class="md-nav__link">
+    专一的boolean酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    不同的char酱
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void" class="md-nav__link">
+    被藏起来的void酱
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    引用类型酱
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自动类型转换
+  </a>
+  
+    <nav class="md-nav" aria-label="自动类型转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    强制类型转换
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/White-NX/JavaLearnProject/edit/master/docs/vara.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Java娘的基本数据类型</h1>
+                
+                <div class="admonition tip">
+<p class="admonition-title">本章节WhiteNX并没有参与审核，所以不保证会出现正常的东西。</p>
+</div>
+<p>Java作为一种编程语言，当然有最基本的东西"变量"啦！</p>
+<div class="admonition note">
+<p class="admonition-title">非常抱歉</p>
+<p>这个章节的东西应该与变量章节并在一起.....     但是我觉得还是先了解变量基本的使用方式比较好。</p>
+</div>
+<p>变量的本质就是申请内存用于存储数值。也就是说，当创建变量的时候，要在内存中申请空间啦！</p>
+<p>也就是说，当你打出下面这串代码的时候
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">114</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span><span class="o">=</span><span class="mi">514</span><span class="p">;</span>
+</code></pre></div>
+会发生这些事：</p>
+<p>Java娘：歪？内存？帮忙弄两块空间，x=114，y=514，昂！</p>
+<p>内存：好嘞！</p>
+<div class="admonition warning">
+<p class="admonition-title">这并不是真正的申请内存方式，请不要坚信，也不要尝试与内存条对话！</p>
+</div>
+<p>可惜，计算机太笨了，它需要你告诉它要存储的是 <strong>整数，小数还是字符</strong> 。</p>
+<p>Java的数据类型还分有两个，分别是 <strong>引用数据类型和内置数据类型</strong> ，接下来我们就来好好介绍下。</p>
+<h2 id="_1">内置数据类型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Java娘为我们提供了八种基本 <em>后宫（划掉</em> 类型，分别有 <strong>六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。</strong> 。</p>
+<div class="admonition warning">
+<p class="admonition-title">注意，是布尔型，不是法布尔型！</p>
+</div>
+<p>接下来，我们就来好好认识这几个数字类型。</p>
+<h3 id="byte">Byte酱！<a class="headerlink" href="#byte" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Byte数据类型是8位，有符号的，且以二进制补码表形式表示的整数。</li>
+<li>最小值：<code>-128</code>，也就是<code>(-2^7)</code>；</li>
+<li>最大值：<code>127</code>，也就是<code>(2^7-1)</code>；</li>
+<li>默认值：<code>0</code>，也就是.....没有也就是好吗！</li>
+<li>byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的&frac14;；</li>
+<li>举个栗子：<code>byte a=100;</code></li>
+</ul>
+<h3 id="short">short酱！<a class="headerlink" href="#short" title="Permanent link">&para;</a></h3>
+<ul>
+<li>short整数类型是16位，有符号的，且以二进制补码表形式表示的整数。 <em>(我怎么感觉我说过类似的台词......)</em></li>
+<li>最小值：<code>-32768</code>，也就是<code>(-2^31)</code>；</li>
+<li>最大值：<code>32767</code>，也就是<code>(2^15-1)</code>； <em>(这就是为什么我的世界Java版的最高附魔等级不能超过32767)</em></li>
+<li>默认值：<code>0</code>，也就是......拜托，你很机车耶；￣へ￣</li>
+<li>short数据类型也可以像byte那样节省空间。一个short变量是int型变量所占空间的&frac12;； <em>(int酱：.....为什么每次都拿我比)</em></li>
+<li>举个栗子：<code>short x=1000;</code></li>
+</ul>
+<h3 id="int">每次都被当做比较对象的int酱！<a class="headerlink" href="#int" title="Permanent link">&para;</a></h3>
+<ul>
+<li>int整数类型是32位，有符号的，且以二进制补码形式表示的整数。 <del>(我绝对说了三次)</del></li>
+<li>最小值是<code>-2,147,483,648</code>，也就是<code>(-2^31)</code>；</li>
+<li>最大值是<code>2,147,483,647</code>，也就是<code>(2^31-1)</code>；</li>
+<li>默认值是<code>0</code>，也就是<code>(2-2)</code>，爽了吧，哼！</li>
+<li>一般的变量类型是int <del>整数变量界的正宫（不是</del></li>
+<li>举个栗子：<code>int x=114514;</code></li>
+</ul>
+<h3 id="long">超大的long酱<a class="headerlink" href="#long" title="Permanent link">&para;</a></h3>
+<ul>
+<li>long整数类型是64位，有符号的，且以二进制补码形式表示的整数。 <em>(我发誓，下面绝对没有类似的句子了)</em></li>
+<li>最小值是<code>-9,223,372,036,854,775,808</code>，也就是<code>(-2^64)</code>；</li>
+<li>最大值是<code>9,223,372,036,854,775,808</code>，也就是<code>(2^64-1)</code>；</li>
+<li>默认值是<code>0L</code>；</li>
+<li>主要使用在较大整数上； <em>所以说超大嘛，你到底在想什么=v=</em></li>
+<li>举个栗子：<code>long a=1145141919810L;</code></li>
+</ul>
+<h3 id="float">float酱<a class="headerlink" href="#float" title="Permanent link">&para;</a></h3>
+<ul>
+<li>float数据类型是单精度，32位且符合IEEE 754标准的 <strong>浮点数</strong>。 <em>出现了！野生的浮点！</em></li>
+<li>默认值是<code>0.0f</code>；</li>
+<li>浮点数不能用于表示精确的值，如货币。</li>
+<li>举个栗子：<code>float f1=12.1f;</code></li>
+</ul>
+<h3 id="double">double酱<a class="headerlink" href="#double" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">请勿双杀。</p>
+</div>
+<ul>
+<li>double数据类型是双精度，64位，且符合IEEE 754标准的浮点数。 <del>好，又是这个该死的重复</del></li>
+<li>默认值是<code>0.0d</code>；</li>
+<li>double是浮点数的默认类型。 <del>浮点变量界的正宫</del></li>
+<li>不能用于表示精确的值；</li>
+<li>举个栗子：<code>double d1=114.5d;</code></li>
+</ul>
+<h3 id="boolean">专一的boolean酱<a class="headerlink" href="#boolean" title="Permanent link">&para;</a></h3>
+<ul>
+<li>boolean数据类型只表示一位的信息；</li>
+<li>只取两个数值，<code>true/false</code>；</li>
+<li>默认值是<code>false</code>， <del>也就是<code>true</code>的反义词</del></li>
+<li>举个栗子：<code>boolean iLoveMisaka = true;</code></li>
+</ul>
+<h3 id="char">不同的char酱<a class="headerlink" href="#char" title="Permanent link">&para;</a></h3>
+<ul>
+<li>char类型是一个单一的16位Unicode字符。</li>
+<li>最小值是<code>\u000</code>，也就是<code>0</code>； <del>出现了！看不懂的字</del></li>
+<li>最大值是<code>\uffff</code>，也就是<code>65,535</code>；</li>
+<li>没有默认值！</li>
+<li>char可以存储任何字符， <strong>但是要加引号</strong></li>
+<li>举个栗子：<code>char iLove='Misaka';</code></li>
+</ul>
+<h3 id="void">被藏起来的void酱<a class="headerlink" href="#void" title="Permanent link">&para;</a></h3>
+<ul>
+<li>无法被直接操作；</li>
+<li>未知，但存在。</li>
+</ul>
+<h2 id="_2">实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>实际上，上面的东西根本不用死记，因为这些小可爱们的 <del>三围</del> 数据已经被以常量的形式定义了。</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimitiveTypeTest</span> <span class="p">{</span>  
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="c1">// byte  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;基本类型：byte 二进制位数：&quot;</span> <span class="o">+</span> <span class="n">Byte</span><span class="p">.</span><span class="na">SIZE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;包装类：java.lang.Byte&quot;</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最小值：Byte.MIN_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Byte</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最大值：Byte.MAX_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Byte</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>  
+
+        <span class="c1">// short  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;基本类型：short 二进制位数：&quot;</span> <span class="o">+</span> <span class="n">Short</span><span class="p">.</span><span class="na">SIZE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;包装类：java.lang.Short&quot;</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最小值：Short.MIN_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Short</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最大值：Short.MAX_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Short</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>  
+
+        <span class="c1">// int  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;基本类型：int 二进制位数：&quot;</span> <span class="o">+</span> <span class="n">Integer</span><span class="p">.</span><span class="na">SIZE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;包装类：java.lang.Integer&quot;</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最小值：Integer.MIN_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Integer</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最大值：Integer.MAX_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Integer</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>  
+
+        <span class="c1">// long  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;基本类型：long 二进制位数：&quot;</span> <span class="o">+</span> <span class="n">Long</span><span class="p">.</span><span class="na">SIZE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;包装类：java.lang.Long&quot;</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最小值：Long.MIN_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Long</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最大值：Long.MAX_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Long</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>  
+
+        <span class="c1">// float  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;基本类型：float 二进制位数：&quot;</span> <span class="o">+</span> <span class="n">Float</span><span class="p">.</span><span class="na">SIZE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;包装类：java.lang.Float&quot;</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最小值：Float.MIN_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Float</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最大值：Float.MAX_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Float</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>  
+
+        <span class="c1">// double  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;基本类型：double 二进制位数：&quot;</span> <span class="o">+</span> <span class="n">Double</span><span class="p">.</span><span class="na">SIZE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;包装类：java.lang.Double&quot;</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最小值：Double.MIN_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Double</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最大值：Double.MAX_VALUE=&quot;</span> <span class="o">+</span> <span class="n">Double</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>  
+
+        <span class="c1">// char  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;基本类型：char 二进制位数：&quot;</span> <span class="o">+</span> <span class="n">Character</span><span class="p">.</span><span class="na">SIZE</span><span class="p">);</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;包装类：java.lang.Character&quot;</span><span class="p">);</span>  
+        <span class="c1">// 以数值形式而不是字符形式将Character.MIN_VALUE输出到控制台  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最小值：Character.MIN_VALUE=&quot;</span>  
+                <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">Character</span><span class="p">.</span><span class="na">MIN_VALUE</span><span class="p">);</span>  
+        <span class="c1">// 以数值形式而不是字符形式将Character.MAX_VALUE输出到控制台  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;最大值：Character.MAX_VALUE=&quot;</span>  
+                <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">Character</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div>
+自己编译咯，我不把把结果列出来啦~</p>
+<p>甚至连默认值都是早已被定义好的常量！</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kt">boolean</span> <span class="n">bool</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kt">byte</span> <span class="n">by</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kt">char</span> <span class="n">ch</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kt">double</span> <span class="n">d</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kt">float</span> <span class="n">f</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kt">long</span> <span class="n">l</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="kt">short</span> <span class="n">sh</span><span class="p">;</span>
+    <span class="kd">static</span> <span class="n">String</span> <span class="n">str</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bool :&quot;</span> <span class="o">+</span> <span class="n">bool</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Byte :&quot;</span> <span class="o">+</span> <span class="n">by</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Character:&quot;</span> <span class="o">+</span> <span class="n">ch</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Double :&quot;</span> <span class="o">+</span> <span class="n">d</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Float :&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Integer :&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Long :&quot;</span> <span class="o">+</span> <span class="n">l</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Short :&quot;</span> <span class="o">+</span> <span class="n">sh</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;String :&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+一样，请自行编译=v=</p>
+<h2 id="_3">引用类型酱<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>在Java中，引用类型的变量与C/C++的指针非常相似，连难度都差不多。引用类型指向一个对象，指向对象的变量是引用变量。这些变量在声明时被指定为一个特定的类型，比如 <code>Employee</code>、<code>Puppy</code> 等。变量一旦声明后，类型就不能被改变了。</li>
+<li>对象、数组都是引用数据类型。</li>
+<li>所有引用类型的默认值都是<code>null</code>。</li>
+<li>一个引用变量可以用来引用任何与之兼容的类型。</li>
+<li>举个栗子：<code>Site site = new Site("WhiteNX")</code>。</li>
+</ul>
+<p>简单来说，引用数据类型就是除内置数据类型以外的所有数据。两者的语法区别很大，且有完全不同的行为。</p>
+<p>我们在这先浅谈，之后再继♂续♂深♂入♂。</p>
+<p>Java娘：.....你想干什么？！</p>
+<p>Java娘支持一些特殊的转义字符序列：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>字符含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>换行 (0x0a)</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车 (0x0d)</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符(0x0c)</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格 (0x08)</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>空字符 (0x0)</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>空格 (0x20)</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>制表符</td>
+</tr>
+<tr>
+<td>\"</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>\ddd</td>
+<td>八进制字符 (ddd)</td>
+</tr>
+<tr>
+<td>\uxxxx</td>
+<td>16进制Unicode字符 (xxxx)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">自动类型转换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Java娘：我会帮您解决类型的转换，my master.</p>
+<p>整型、实型（常量）、字符型数据实际上是可以混合运算的。运算中，不同类型的数据先转化为同一类型，然后进行运算。（好麻烦</p>
+<p>转换是从低级到高级哒</p>
+<p><code>byte,short,char—&gt; int —&gt; long—&gt; float —&gt; double</code></p>
+<p>但是，这还是有规则的！</p>
+<ul>
+<li>休想对boolean类型进行类型转换！</li>
+<li>不能把对象类型转换成不相关类的对象！（不能有小三（不是）</li>
+<li>在把容量大的类型转换为容量小的类型时必须使用强制类型转换！</li>
+<li>转换过程中可能导致溢出或损失精度！</li>
+<li>浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入！</li>
+</ul>
+<p>反面教材：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">128</span><span class="p">;</span>   
+<span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="n">i</span><span class="p">;</span>
+</code></pre></div>
+byte酱的最大值是127，但<code>i</code>的值是128，这就会导致溢出。</p>
+<h3 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ZiDongLeiZhuan</span><span class="p">{</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+            <span class="kt">char</span> <span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="c1">//定义一个char类型</span>
+            <span class="kt">int</span> <span class="n">i1</span> <span class="o">=</span> <span class="n">c1</span><span class="p">;</span><span class="c1">//char自动类型转换为int</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;char自动类型转换为int后的值等于&quot;</span><span class="o">+</span><span class="n">i1</span><span class="p">);</span>
+            <span class="kt">char</span> <span class="n">c2</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="c1">//定义一个char类型</span>
+            <span class="kt">int</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">c2</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="c1">//char 类型和 int 类型计算</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;char类型和int计算后的值等于&quot;</span><span class="o">+</span><span class="n">i2</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+编译得：
+<div class="highlight"><pre><span></span><code>char自动类型转换为int后的值等于97
+char类型和int计算后的值等于66
+</code></pre></div></p>
+<div class="admonition queastion">
+<p class="admonition-title">wtf</p>
+<p>你可能会疑惑，为什么a会等于97？.....我哪知道，我唯一知道的是，在ASCII码中，a就是97，A是65，所以<code>i2</code>=65+1=66。</p>
+</div>
+<h2 id="_6">强制类型转换<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>Java娘：Master偶尔也有强硬的一面呢</p>
+<ol>
+<li>条件是转换的数据类型必须是兼容的。</li>
+<li>格式：(type)value type是要强制类型转换后的数据类型</li>
+</ol>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">QiangZhiZhuanHuan</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+        <span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="n">i1</span><span class="p">;</span><span class="c1">//强制类型转换为byte</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;int强制类型转换为byte后的值等于&quot;</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+编译结果：
+<div class="highlight"><pre><span></span><code>int强制类型转换为byte后的值等于123
+</code></pre></div></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      最后更新: 2021-02-01
+    
+  </small>
+</div>
+                  
+                
+              
+              
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script>
+var gitalk = new Gitalk({
+  clientID: '24d2aa04c69c48d0d59e',
+  clientSecret: 'c29f6b8c195008903fb3275eb365d377ece92997',
+  repo: 'gitalk',
+  owner: 'White-NX',
+  admin: ['White-NX'],
+  proxy: 'https://commit-cors.whitenx.workers.dev',
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: true  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
+<div id="gitalk-container"></div>
+
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="variable.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 变量与常量(两CP)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              变量与常量(两CP)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="calculate.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Java娘的整数运算" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Java娘的整数运算
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019-2021 WhiteNX Group with ASNCC. All rights reserved.<br>It is forbidden to quote this website directly.But SwordVision is an exception.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/White-NX" target="_blank" rel="noopener" title="White-NX on github" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.sections", "navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>

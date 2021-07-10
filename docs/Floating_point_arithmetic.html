@@ -14,7 +14,7 @@
     
     
       
-        <title>WhiteNX Java教程</title>
+        <title>Java娘的浮点运算 - WhiteNX Java教程</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              开始入土
+              Java娘的浮点运算
             
           </span>
         </div>
@@ -184,12 +184,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="index.html" class="md-tabs__link md-tabs__link--active">
+    <a href="index.html" class="md-tabs__link">
       开始入土
     </a>
   </li>
@@ -210,6 +208,8 @@
         
   
   
+    
+  
 
 
   
@@ -221,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="start.html" class="md-tabs__link">
+      <a href="start.html" class="md-tabs__link md-tabs__link--active">
         开始学♂习♂
       </a>
     </li>
@@ -309,21 +309,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         开始入土
       </a>
-      
     </li>
   
 
@@ -349,12 +339,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         开始学♂习♂
@@ -435,14 +427,16 @@
             
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
       <label class="md-nav__link" for="__nav_3_2">
         程序基础
@@ -494,11 +488,65 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Floating_point_arithmetic.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java娘的浮点运算
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Floating_point_arithmetic.html" class="md-nav__link md-nav__link--active">
         Java娘的浮点运算
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    类型提升！
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    溢出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    强制转换
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -665,6 +713,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    类型提升！
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    溢出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    强制转换
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -675,59 +752,93 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/White-NX/JavaLearnProject/edit/master/docs/index.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/White-NX/JavaLearnProject/edit/master/docs/Floating_point_arithmetic.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="_1">开始入土：安装开发环境以及编辑器<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><center></p>
-<table><tr><td bgcolor="    #FF8C00"><center>
-<p>警告：
-<h2>本文档接入SCP基金会安保网络</h2>
-任何尝试恶意攻击本站点的行为都是<br>
-<h2>不可取的</h2>未经授权进行恶意攻击的人员<br>将被监控，追踪并处理
-</p>
-<center></td></tr></table>
-<p></center></p>
-<p>在学习Java之前，我们需要安装Java环境。</p>
-<p>我并不推崇使用原<code>JavaLearn</code>中的安装<code>Eclipse</code>，而是推崇安装Java原生IDE+VS Code.</p>
-<p>安装Java SE+VS Code开发环境</p>
-<p>前往 <a href="https://www.oracle.com/java/technologies/javase-downloads.html" title="oracle Java SE">oracle Java SE</a> 下载Java开发环境</p>
-<p>前往 <a href="https://code.visualstudio.com/" title="VS Code">VS Code</a> 下载VS Code编辑器</p>
+                <h1 id="_1">不精确的浮点运算娘<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>浮点运算娘和整数运算娘相比，只能进行加减乘除等计算，不能做位运算和移位运算。</p>
+<p>浮点运算娘的表示范围虽然很大，但是往往是不精确哒！</p>
 <div class="admonition question">
-<p class="admonition-title">手机端咋办</p>
-<p>你可以<a href="https://g0.eyling.top/javacompiler.apk">点此</a>下载第三方编译器。</p>
+<p class="admonition-title">为什么不精确？</p>
+<p>我们先认为有一个浮点数<code>0.1</code>，这个浮点数事实上在计算姬内并不能准确表示，因为十进制的<code>0.1</code>换算成二进制是一个无限循环的小数。
+显而易见的是，使用<code>double</code>和<code>float</code>都只能存储<code>0.1</code>的近似值。
+但是，<code>0.5</code>可以精确地表示。</p>
 </div>
-<p>当然，如果你想要一个比较完美的开发环境，您可以参考<a href="https://java.talktan.cn" title="JavaLearn原项目">JavaLearn原项目</a>的方法安装<code>Eclipse</code></p>
-<p>安装完成后，开始我们的入土之路：编写第一个程序吧！</p>
+<p>浮点运算会产生误差，举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mf">9.0</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="c1">// 观察x和y是否相等:</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+实际上，它们应该是相等的，1.0/10等于0.1，1-9.0/10也等于0.1。但是我们无法使用常规的比较方式判断他们是否相等，因为上述代码编译得：</p>
+<p><div class="highlight"><pre><span></span><code>0.1
+0.09999999999999998
+</code></pre></div>
+Java娘&amp;计算姬：我就是分不清嘛...QAQ</p>
+<p>由于浮点运算娘存在误差，所以我们要用一些非常规的技巧来判断他们是否相等
+<div class="highlight"><pre><span></span><code><span class="c1">// 比较x和y是否相等，先计算其差的绝对值:</span>
+<span class="kt">double</span> <span class="n">r</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">);</span>
+<span class="c1">// 再判断绝对值是否足够小:</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mf">0.00001</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 唔姆...勉强可以认为相等</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// 不相等</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <div class="admonition pen">
-<p class="admonition-title">本项目的其他分支：</p>
-<p>Ar-Sr-Na Serverless Learn分支：<a href="https://www.arlearn.ltd/">https://www.arlearn.ltd/</a></p>
-<p>主线：<a href="http://java.talktan.cn">http://java.talktan.cn</a></p>
-<p>就我域名没什么B格QAQ
-<strong>注意：</strong> 这三个分支的方向各不相同，请酌情选择。</p>
+<p class="admonition-title">拓展：Math.abs()</p>
+<p><code>Math.abs()</code>函数酱会返回指定数的绝对值。</p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//i=1</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//i=1</span>
+</code></pre></div>
+当Master试图使用Math.abs求一个不是整数的绝对值时，她会给你一个<code>NaN</code>。</p>
 </div>
-<div class="admonition success">
-<p class="admonition-title">特别鸣谢:Ar-Sr-Na（SwordVision）</p>
-</div>
-<div class="admonition warn">
-<p class="admonition-title">本分支是被二次元化过的</p>
-<p>您可能会遇到如下情况：</p>
+<h2 id="_2">类型提升！<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>如果与浮点数参与运算的数中有一个整数，那么这个整数会自动提升为浮点数。<del>全自动不精确化</del></p>
+<p>举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">1.2</span> <span class="o">+</span> <span class="mf">24.0</span> <span class="o">/</span> <span class="n">n</span><span class="p">;</span> <span class="c1">// 6.0</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="_3">溢出<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>浮点娘：我....我被填满了....</p>
+<p>整数运算娘在除数为零的时候会报错，但是浮点娘不会！只是会返回一些奇怪的结果罢了。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="o">/</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// NaN</span>
+<span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Infinity</span>
+<span class="kt">double</span> <span class="n">d3</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// -Infinity</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Java娘的提示</p>
+<p>Master！为什么master总是搞出一些奇怪的结果.....我来解释一下吧</p>
 <ul>
-<li>呐呐呐呐呐呐呐，超强声呐 <strong>这实际上是拟声词，无需注意，与中文语境中的喂类似</strong></li>
-<li><code>xxxx娘</code>，<code>xxxx酱</code>，<code>xxxx桑</code> 等称呼，<strong>这是中国人对日本称呼的一种拟声化，也就是"空耳"，实际上这些娘，酱，桑在本文档中可以被忽略。</strong></li>
-<li><code>master</code>，释义：主人。<strong>没错，主人，这是对<code>您</code>的称呼，Java娘之后都可能用<code>master</code>来称呼您。</strong></li>
-<li>出现各式各样的动漫角色名称。<strong>无需在意，Master只需要将包含在代码块中的任何东西当做范例就好。</strong></li>
-<li>计算姬：计算机。</li>
+<li><code>NaN</code>的全称是Not a number，也就是不是数字的意思。</li>
+<li><code>Infinity</code>的意思是正无穷</li>
+<li><code>-Infinity</code>的意思是负无穷</li>
 </ul>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">本教程并不保证初中学历或以下能够理解，但是我们已经尽力了。</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">本分支隶属于JavaLearn项目，但所使用的条款有所不同。</p>
-</div>
+<h2 id="_4">强制转换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Java娘：Master好强硬啊！</p>
+<p>浮点数娘可以强制转换为整数娘，举个栗子：
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="mf">12.3</span><span class="p">;</span> <span class="c1">// 12</span>
+<span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="mf">12.7</span><span class="p">;</span> <span class="c1">// 12</span>
+<span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">-</span><span class="mf">12.7</span><span class="p">;</span> <span class="c1">// -12</span>
+<span class="kt">int</span> <span class="n">n3</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="mf">12.7</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">);</span> <span class="c1">// 13</span>
+<span class="kt">int</span> <span class="n">n4</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="mf">1.2e20</span><span class="p">;</span> <span class="c1">// 2147483647</span>
+</code></pre></div>
+可以发现，在转型时，末尾的小数点会被丢掉。如果转型的数字超过了整数能表示的最大范围，就会返回整数能表示的最大数。</p>
+<p>若要进行四舍五入，可以加上0.5后再转型。</p>
                 
                   
                     
@@ -736,7 +847,7 @@
 <div class="md-source-date">
   <small>
     
-      最后更新: 2021-05-18
+      最后更新: 2021-02-03
     
   </small>
 </div>
@@ -778,15 +889,30 @@ gitalk.render('gitalk-container')
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="calculate.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Java娘的整数运算" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Java娘的整数运算
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="what-is-java.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 什么是Java娘" rel="next">
+        <a href="output.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Java娘的输出" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              什么是Java娘
+              Java娘的输出
             </div>
           </div>
           <div class="md-footer__button md-icon">
