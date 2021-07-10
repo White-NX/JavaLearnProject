@@ -25,7 +25,7 @@ if (window.frames.length != parent.frames.length) {
  * 传入内容：ip（字符串），URL（字符串）
  */
 $(document).ready(function(){
-    $.post('/lab/nymph-system-api/statistics/api.php',{
+    $.post('https://eyling.top/lab/nymph-system-api/statistics/api.php',{
         ip:ip,
         url:url,
         last_page:document.referrer
