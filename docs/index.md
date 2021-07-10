@@ -31,7 +31,7 @@
 
     Ar-Sr-Na Serverless Learn分支：<https://www.arlearn.ltd/>
 
-    主线：<http://java.talktan.cn>
+    主线（PixEric）：<https://pexeric.gitee.io/2021/02/25/JavaLearn/>
 
     就我域名没什么B格QAQ
     **注意：** 这三个分支的方向各不相同，请酌情选择。
