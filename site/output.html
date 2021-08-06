@@ -82,6 +82,7 @@
   <!-- Nymph CORE sp. -->
   <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
   <script src="https://g0.eyling.top/wgnxpt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
      <!-- Font Awesome CSS-->
    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
 
@@ -756,6 +757,49 @@
                 
                 
                 <h1 id="java">Java娘的输出<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">本章评级</p>
+<p><div id="diff" style="width: 300px;height:300px;"></div></p>
+</div>
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [0, 0, 0, 0, 0, 2],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
 <p>Java娘作为一个编程语言，自然拥有输入和输出的能力哒！接下来就让我们来好♂好♂认♂识输入和输出！</p>
 <h2 id="_1">输出<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>可以发现，在前面的代码中，我们总是使用<code>System.out.println()</code>来向屏幕输出内容。</p>

@@ -11,11 +11,14 @@ console.log("%c\n       ", "font-size:41px;background:url('https://eyling.top/im
 
 // iframe反制
 if (window.frames.length != parent.frames.length) {
-　　console.error('[WhiteNX安全中心]在iframe中');
-　　$(document).ready(function(){
+    if (location.search = "?diswgnxpt"){
+        
+    }else{
+        　　$(document).ready(function(){
 　　    $('body').replaceWith('<body><h1>403 Forbbiden</h1></body>');
 　　})
 　　window.open("https://java.eyling.top");
+    }
 }
 
 //统计数据

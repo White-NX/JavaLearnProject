@@ -1,5 +1,47 @@
 # Switch多重选择
 
+!!! note "本章评级"
+    <div id="diff" style="width: 300px;height:300px;"></div>
+
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [1, 1, 0, 1, 0, 0],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
 欸，你想，如果我想要有很多的选择，用`if`语句是不是太麻烦了？没错，所以我们今天就来学习`switch语句`。
 
 一个基本的`Switch`语句长这样

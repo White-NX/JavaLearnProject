@@ -1,5 +1,46 @@
 # Java变量的声明和初始化&常量的声明
 
+!!! note "本章评级"
+    <div id="diff" style="width: 300px;height:300px;"></div>
+
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [6, 1, 0, 0, 4, 6],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
 
 常量和变量是 Java 程序中最基础的两个元素。常量的值是不能被修改的，而变量的值在程序运行期间可以被修改。
 

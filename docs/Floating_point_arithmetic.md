@@ -1,5 +1,48 @@
 # 不精确的浮点运算娘
 
+!!! note "本章评级"
+    <div id="diff" style="width: 300px;height:300px;"></div>
+
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [2, 1, 2, 2, 1, 1],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
+
 浮点运算娘和整数运算娘相比，只能进行加减乘除等计算，不能做位运算和移位运算。
 
 浮点运算娘的表示范围虽然很大，但是往往是不精确哒！

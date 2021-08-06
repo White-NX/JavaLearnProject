@@ -1,4 +1,45 @@
 # Java娘的输入
+!!! note "本章评级"
+    <div id="diff" style="width: 300px;height:300px;"></div>
+
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [3, 2, 0, 1, 3, 4],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
 
 请做好心理准备，输入可比输出难多了......
 

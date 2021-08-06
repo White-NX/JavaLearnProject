@@ -1,5 +1,47 @@
 # Java娘的循环
 
+!!! note "本章评级"
+    <div id="diff" style="width: 300px;height:300px;"></div>
+
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [1, 0, 0, 0, 1, 1],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
 !!! tip "WhiteNX并没有直接参与审核，所以不保证会出现正常的内容。"
 
 Java娘作为一个 ~~萌娘~~ 成熟的编程语言，当然有循环这种东西。 **循环就是让计算姬做有条件的循环计算，条件不满足时一直计算，满足时停止。**

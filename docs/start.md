@@ -1,5 +1,47 @@
 # 开始入土：编写第一个Java程序
 
+!!! note "本章评级"
+    <div id="diff" style="width: 300px;height:300px;"></div>
+
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [1, 1, 1, 1, 1, 1],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
 在开始之前，我们需要了解一下Java的类，对象，方法和实例变量：
 
  - 对象：对象是类的一个"实例"，有状态和行为。例如，这里有一条狗，他的状态有："颜色"，"品种"；行为有："睡觉"，"摇尾巴"，"叫"等。

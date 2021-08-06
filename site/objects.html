@@ -82,6 +82,7 @@
   <!-- Nymph CORE sp. -->
   <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
   <script src="https://g0.eyling.top/wgnxpt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
      <!-- Font Awesome CSS-->
    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
 
@@ -824,6 +825,49 @@
                 
                 
                 <h1 id="java">Java对象和类<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">本章评级</p>
+<p><div id="diff" style="width: 300px;height:300px;"></div></p>
+</div>
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [5, 3, 3, 1, 5, 4],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
 <p>在本节中，我们将重点研究对象的类和概念</p>
 <div class="admonition warning">
 <p class="admonition-title">警告：此篇章极其容易造成弃坑 <strong>(但是你又不得不读)</strong></p>

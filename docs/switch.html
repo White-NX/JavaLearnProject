@@ -82,6 +82,7 @@
   <!-- Nymph CORE sp. -->
   <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
   <script src="https://g0.eyling.top/wgnxpt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
      <!-- Font Awesome CSS-->
    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
 
@@ -730,6 +731,49 @@
                 
                 
                 <h1 id="switch">Switch多重选择<a class="headerlink" href="#switch" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">本章评级</p>
+<p><div id="diff" style="width: 300px;height:300px;"></div></p>
+</div>
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '知识点难易度',
+        type: 'radar',
+        data: [
+            {
+                value: [1, 1, 0, 1, 0, 0],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
 <p>欸，你想，如果我想要有很多的选择，用<code>if</code>语句是不是太麻烦了？没错，所以我们今天就来学习<code>switch语句</code>。</p>
 <p>一个基本的<code>Switch</code>语句长这样
 <div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="p">(</span><span class="n">表达式</span><span class="p">){</span>

@@ -82,6 +82,7 @@
   <!-- Nymph CORE sp. -->
   <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
   <script src="https://g0.eyling.top/wgnxpt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
      <!-- Font Awesome CSS-->
    <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
 
@@ -744,6 +745,49 @@
                 
                 
                 <h1 id="_1">数组<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">本章评级</p>
+<p><div id="diff" style="width: 300px;height:300px;"></div></p>
+</div>
+<script>
+var chartDom = document.getElementById('diff');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: 'LEVEL'
+    },
+    legend: {
+        data: ['知识点六边形图']
+    },
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            { name: '掌握', max: 6},
+            { name: '使用', max: 6},
+            { name: '复杂', max: 6},
+            { name: '查错', max: 6},
+            { name: '认知', max: 6},
+            { name: '记忆', max: 6}
+        ]
+    },
+    series: [{
+        name: '预算 vs 开销（Budget vs spending）',
+        type: 'radar',
+        data: [
+            {
+                value: [0, 1, 0, 1, 1, 0],
+                name: '知识点六边形图'
+            }
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+
+</script>
+
 <p>数组，顾名思义，就是一堆数字的组合<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>，也就是解决人类麻烦的产物，使用数组<code>numbers[100]</code>可以代替大量的类似于<code>numbers1，numbers2...</code>的变量。</p>
 <h2 id="_2">举个栗子<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>假设我们一组相同类型的变量，例如5位同学的名字，我们可以这么写：
