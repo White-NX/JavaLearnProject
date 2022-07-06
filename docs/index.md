@@ -23,14 +23,12 @@
 !!! question "手机端咋办"
     你可以[点此](https://g0.eyling.top/javacompiler.apk)下载第三方编译器。
 
-当然，如果你想要一个比较完美的开发环境，您可以参考[JavaLearn原项目](https://java.talktan.cn "JavaLearn原项目")的方法安装`Eclipse`
-
 安装完成后，开始我们的入土之路：编写第一个程序吧！
 
 !!! pen "本项目的其他分支："
 
-    Ar-Sr-Na Serverless Learn分支：<https://www.arlearn.ltd/>
-    ![Ar-Sr-Na](https://www.arsrna.cn/elec/images/declaration.png)
+    Ar-Sr-Na Serverless Learn分支：<https://l.arsrna.cn>
+    ![Ar-Sr-Na](https://www.arsrna.cn/elec/RILogo.jpg)
 
     主线（PixEric）：<https://pexeric.gitee.io/2021/02/25/JavaLearn/>
 
