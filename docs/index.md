@@ -27,7 +27,7 @@
 
 !!! pen "本项目的其他分支："
 
-    Ar-Sr-Na Serverless Learn分支：<https://l.arsrna.cn>
+    Ar-Sr-Na Learn分支：<https://l.arsrna.cn>
     ![Ar-Sr-Na](https://www.arsrna.cn/elec/RILogo.jpg)
 
     主线（PixEric）：<https://pexeric.gitee.io/2021/02/25/JavaLearn/>
@@ -51,7 +51,9 @@
 !!! note "该卡片将显示赞助商/姊妹站点广告"
     * **Ar-Sr-Na**
     
-    *女装只有cos90°次和tan90°次* ，但创新永无止境，大胆提出质疑，你的勇气与生俱来，你的想法没有任何界限
+    *突破计算边界，构筑数字世界* 
+    
+    创新永无止境，大胆提出质疑，你的勇气与生俱来，你的想法没有任何界限
     
     大胆设计，藐视「理所当然」
     
