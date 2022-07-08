@@ -29,6 +29,7 @@
 
     Ar-Sr-Na Learn分支：<https://l.arsrna.cn>
     ![Ar-Sr-Na](https://www.arsrna.cn/elec/RILogo.jpg)
+    图标作品已获原作者许可，[授权书](https://res.arsrna.cn/agreements/%E8%91%97%E4%BD%9C%E6%9D%83%E6%8E%88%E6%9D%83%E4%B9%A6_WhiteNX.pdf)
 
     主线（PixEric）：<https://pexeric.gitee.io/2021/02/25/JavaLearn/>
 
